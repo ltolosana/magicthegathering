@@ -13,9 +13,9 @@
 		60A008F625FD5EAE00A2941E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A008F425FD5EAE00A2941E /* Main.storyboard */; };
 		60A008F825FD5EAF00A2941E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A008F725FD5EAF00A2941E /* Assets.xcassets */; };
 		60A008FB25FD5EAF00A2941E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A008F925FD5EAF00A2941E /* LaunchScreen.storyboard */; };
-		60A0090625FD5EB000A2941E /* Magic__The_GatheringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0090525FD5EB000A2941E /* Magic__The_GatheringTests.swift */; };
-		7C6AA62836C50A08422A1D00 /* Pods_Magic__The_Gathering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E14E63FEA435D6AF7719FC2 /* Pods_Magic__The_Gathering.framework */; };
-		9D60379016BA6190391D9F23 /* Pods_Magic__The_GatheringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADF0646BD53A433123B65C7 /* Pods_Magic__The_GatheringTests.framework */; };
+		60A0090625FD5EB000A2941E /* MagicTheGatheringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0090525FD5EB000A2941E /* MagicTheGatheringTests.swift */; };
+		6C1B8284A67AC6B0597B385D /* Pods_MagicTheGatheringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD9189E817E2483D3414D07 /* Pods_MagicTheGatheringTests.framework */; };
+		7B73BA6C97777621FBB439E9 /* Pods_MagicTheGathering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE18737FFE4AC11B8C46C736 /* Pods_MagicTheGathering.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,11 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CF7F86ADBC4D60F57EDA893 /* Pods-Magic: The GatheringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic: The GatheringTests.debug.xcconfig"; path = "Target Support Files/Pods-Magic: The GatheringTests/Pods-Magic: The GatheringTests.debug.xcconfig"; sourceTree = "<group>"; };
-		48AEAD149B45E17E43717670 /* Pods-Magic: The Gathering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic: The Gathering.debug.xcconfig"; path = "Target Support Files/Pods-Magic: The Gathering/Pods-Magic: The Gathering.debug.xcconfig"; sourceTree = "<group>"; };
-		4E14E63FEA435D6AF7719FC2 /* Pods_Magic__The_Gathering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magic__The_Gathering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		516C3D5C3E23F95F8115090E /* Pods-Magic: The Gathering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic: The Gathering.release.xcconfig"; path = "Target Support Files/Pods-Magic: The Gathering/Pods-Magic: The Gathering.release.xcconfig"; sourceTree = "<group>"; };
-		60A008EB25FD5EAE00A2941E /* Magic: The Gathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic: The Gathering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		413360A86AFA398A7089C43C /* Pods-MagicTheGatheringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGatheringTests.release.xcconfig"; path = "Target Support Files/Pods-MagicTheGatheringTests/Pods-MagicTheGatheringTests.release.xcconfig"; sourceTree = "<group>"; };
+		4A816390742070B113C601C7 /* Pods-MagicTheGatheringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGatheringTests.debug.xcconfig"; path = "Target Support Files/Pods-MagicTheGatheringTests/Pods-MagicTheGatheringTests.debug.xcconfig"; sourceTree = "<group>"; };
+		556C816AD00E53BA4F9F76CF /* Pods-MagicTheGathering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGathering.debug.xcconfig"; path = "Target Support Files/Pods-MagicTheGathering/Pods-MagicTheGathering.debug.xcconfig"; sourceTree = "<group>"; };
+		5AD9189E817E2483D3414D07 /* Pods_MagicTheGatheringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTheGatheringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60A008EB25FD5EAE00A2941E /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A008EE25FD5EAE00A2941E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60A008F025FD5EAE00A2941E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		60A008F225FD5EAE00A2941E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,11 +41,11 @@
 		60A008F725FD5EAF00A2941E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60A008FA25FD5EAF00A2941E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60A008FC25FD5EAF00A2941E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60A0090125FD5EB000A2941E /* Magic: The GatheringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magic: The GatheringTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		60A0090525FD5EB000A2941E /* Magic__The_GatheringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic__The_GatheringTests.swift; sourceTree = "<group>"; };
+		60A0090125FD5EB000A2941E /* MagicTheGatheringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicTheGatheringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60A0090525FD5EB000A2941E /* MagicTheGatheringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicTheGatheringTests.swift; sourceTree = "<group>"; };
 		60A0090725FD5EB000A2941E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80CF946397F4EAFBDCC19B07 /* Pods-Magic: The GatheringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic: The GatheringTests.release.xcconfig"; path = "Target Support Files/Pods-Magic: The GatheringTests/Pods-Magic: The GatheringTests.release.xcconfig"; sourceTree = "<group>"; };
-		BADF0646BD53A433123B65C7 /* Pods_Magic__The_GatheringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magic__The_GatheringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9C1C0F5609E553E97E9EDD7 /* Pods-MagicTheGathering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGathering.release.xcconfig"; path = "Target Support Files/Pods-MagicTheGathering/Pods-MagicTheGathering.release.xcconfig"; sourceTree = "<group>"; };
+		FE18737FFE4AC11B8C46C736 /* Pods_MagicTheGathering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTheGathering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C6AA62836C50A08422A1D00 /* Pods_Magic__The_Gathering.framework in Frameworks */,
+				7B73BA6C97777621FBB439E9 /* Pods_MagicTheGathering.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D60379016BA6190391D9F23 /* Pods_Magic__The_GatheringTests.framework in Frameworks */,
+				6C1B8284A67AC6B0597B385D /* Pods_MagicTheGatheringTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +71,8 @@
 		60A008E225FD5EAE00A2941E = {
 			isa = PBXGroup;
 			children = (
-				60A008ED25FD5EAE00A2941E /* Magic: The Gathering */,
-				60A0090425FD5EB000A2941E /* Magic: The GatheringTests */,
+				60A008ED25FD5EAE00A2941E /* MagicTheGathering */,
+				60A0090425FD5EB000A2941E /* MagicTheGatheringTests */,
 				60A008EC25FD5EAE00A2941E /* Products */,
 				F6D5BA281F9FCC97E5EDD06E /* Pods */,
 				E10397CA9FFD2B4778CBB79E /* Frameworks */,
@@ -82,13 +82,13 @@
 		60A008EC25FD5EAE00A2941E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60A008EB25FD5EAE00A2941E /* Magic: The Gathering.app */,
-				60A0090125FD5EB000A2941E /* Magic: The GatheringTests.xctest */,
+				60A008EB25FD5EAE00A2941E /* MagicTheGathering.app */,
+				60A0090125FD5EB000A2941E /* MagicTheGatheringTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		60A008ED25FD5EAE00A2941E /* Magic: The Gathering */ = {
+		60A008ED25FD5EAE00A2941E /* MagicTheGathering */ = {
 			isa = PBXGroup;
 			children = (
 				60A008EE25FD5EAE00A2941E /* AppDelegate.swift */,
@@ -99,23 +99,23 @@
 				60A008F925FD5EAF00A2941E /* LaunchScreen.storyboard */,
 				60A008FC25FD5EAF00A2941E /* Info.plist */,
 			);
-			path = "Magic: The Gathering";
+			path = MagicTheGathering;
 			sourceTree = "<group>";
 		};
-		60A0090425FD5EB000A2941E /* Magic: The GatheringTests */ = {
+		60A0090425FD5EB000A2941E /* MagicTheGatheringTests */ = {
 			isa = PBXGroup;
 			children = (
-				60A0090525FD5EB000A2941E /* Magic__The_GatheringTests.swift */,
+				60A0090525FD5EB000A2941E /* MagicTheGatheringTests.swift */,
 				60A0090725FD5EB000A2941E /* Info.plist */,
 			);
-			path = "Magic: The GatheringTests";
+			path = MagicTheGatheringTests;
 			sourceTree = "<group>";
 		};
 		E10397CA9FFD2B4778CBB79E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E14E63FEA435D6AF7719FC2 /* Pods_Magic__The_Gathering.framework */,
-				BADF0646BD53A433123B65C7 /* Pods_Magic__The_GatheringTests.framework */,
+				FE18737FFE4AC11B8C46C736 /* Pods_MagicTheGathering.framework */,
+				5AD9189E817E2483D3414D07 /* Pods_MagicTheGatheringTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,10 +123,10 @@
 		F6D5BA281F9FCC97E5EDD06E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				48AEAD149B45E17E43717670 /* Pods-Magic: The Gathering.debug.xcconfig */,
-				516C3D5C3E23F95F8115090E /* Pods-Magic: The Gathering.release.xcconfig */,
-				0CF7F86ADBC4D60F57EDA893 /* Pods-Magic: The GatheringTests.debug.xcconfig */,
-				80CF946397F4EAFBDCC19B07 /* Pods-Magic: The GatheringTests.release.xcconfig */,
+				556C816AD00E53BA4F9F76CF /* Pods-MagicTheGathering.debug.xcconfig */,
+				B9C1C0F5609E553E97E9EDD7 /* Pods-MagicTheGathering.release.xcconfig */,
+				4A816390742070B113C601C7 /* Pods-MagicTheGatheringTests.debug.xcconfig */,
+				413360A86AFA398A7089C43C /* Pods-MagicTheGatheringTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60A008EA25FD5EAE00A2941E /* Magic: The Gathering */ = {
+		60A008EA25FD5EAE00A2941E /* MagicTheGathering */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60A0091525FD5EB000A2941E /* Build configuration list for PBXNativeTarget "Magic: The Gathering" */;
+			buildConfigurationList = 60A0091525FD5EB000A2941E /* Build configuration list for PBXNativeTarget "MagicTheGathering" */;
 			buildPhases = (
 				440EBFE02E379716A90D0B96 /* [CP] Check Pods Manifest.lock */,
 				60A008E725FD5EAE00A2941E /* Sources */,
@@ -148,14 +148,14 @@
 			);
 			dependencies = (
 			);
-			name = "Magic: The Gathering";
+			name = MagicTheGathering;
 			productName = "Magic: The Gathering";
-			productReference = 60A008EB25FD5EAE00A2941E /* Magic: The Gathering.app */;
+			productReference = 60A008EB25FD5EAE00A2941E /* MagicTheGathering.app */;
 			productType = "com.apple.product-type.application";
 		};
-		60A0090025FD5EB000A2941E /* Magic: The GatheringTests */ = {
+		60A0090025FD5EB000A2941E /* MagicTheGatheringTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60A0091825FD5EB000A2941E /* Build configuration list for PBXNativeTarget "Magic: The GatheringTests" */;
+			buildConfigurationList = 60A0091825FD5EB000A2941E /* Build configuration list for PBXNativeTarget "MagicTheGatheringTests" */;
 			buildPhases = (
 				F67313AF6843EAD3D379ACBA /* [CP] Check Pods Manifest.lock */,
 				60A008FD25FD5EB000A2941E /* Sources */,
@@ -167,9 +167,9 @@
 			dependencies = (
 				60A0090325FD5EB000A2941E /* PBXTargetDependency */,
 			);
-			name = "Magic: The GatheringTests";
+			name = MagicTheGatheringTests;
 			productName = "Magic: The GatheringTests";
-			productReference = 60A0090125FD5EB000A2941E /* Magic: The GatheringTests.xctest */;
+			productReference = 60A0090125FD5EB000A2941E /* MagicTheGatheringTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 60A008E625FD5EAE00A2941E /* Build configuration list for PBXProject "Magic: The Gathering" */;
+			buildConfigurationList = 60A008E625FD5EAE00A2941E /* Build configuration list for PBXProject "MagicTheGathering" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,8 +203,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60A008EA25FD5EAE00A2941E /* Magic: The Gathering */,
-				60A0090025FD5EB000A2941E /* Magic: The GatheringTests */,
+				60A008EA25FD5EAE00A2941E /* MagicTheGathering */,
+				60A0090025FD5EB000A2941E /* MagicTheGatheringTests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,7 +245,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Magic: The Gathering-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MagicTheGathering-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,15 +258,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Magic: The Gathering/Pods-Magic: The Gathering-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MagicTheGathering/Pods-MagicTheGathering-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Magic: The Gathering/Pods-Magic: The Gathering-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MagicTheGathering/Pods-MagicTheGathering-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Magic: The Gathering/Pods-Magic: The Gathering-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagicTheGathering/Pods-MagicTheGathering-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F67313AF6843EAD3D379ACBA /* [CP] Check Pods Manifest.lock */ = {
@@ -284,7 +284,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Magic: The GatheringTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MagicTheGatheringTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -308,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60A0090625FD5EB000A2941E /* Magic__The_GatheringTests.swift in Sources */,
+				60A0090625FD5EB000A2941E /* MagicTheGatheringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +317,7 @@
 /* Begin PBXTargetDependency section */
 		60A0090325FD5EB000A2941E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 60A008EA25FD5EAE00A2941E /* Magic: The Gathering */;
+			target = 60A008EA25FD5EAE00A2941E /* MagicTheGathering */;
 			targetProxy = 60A0090225FD5EB000A2941E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -460,18 +460,18 @@
 		};
 		60A0091625FD5EB000A2941E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48AEAD149B45E17E43717670 /* Pods-Magic: The Gathering.debug.xcconfig */;
+			baseConfigurationReference = 556C816AD00E53BA4F9F76CF /* Pods-MagicTheGathering.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3UNKQX6F;
-				INFOPLIST_FILE = "Magic: The Gathering/Info.plist";
+				INFOPLIST_FILE = MagicTheGathering/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.tolosana.Magic--The-Gathering";
+				PRODUCT_BUNDLE_IDENTIFIER = io.tolosana.MagicTheGathering;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,18 +480,18 @@
 		};
 		60A0091725FD5EB000A2941E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 516C3D5C3E23F95F8115090E /* Pods-Magic: The Gathering.release.xcconfig */;
+			baseConfigurationReference = B9C1C0F5609E553E97E9EDD7 /* Pods-MagicTheGathering.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3UNKQX6F;
-				INFOPLIST_FILE = "Magic: The Gathering/Info.plist";
+				INFOPLIST_FILE = MagicTheGathering/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.tolosana.Magic--The-Gathering";
+				PRODUCT_BUNDLE_IDENTIFIER = io.tolosana.MagicTheGathering;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,54 +500,54 @@
 		};
 		60A0091925FD5EB000A2941E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CF7F86ADBC4D60F57EDA893 /* Pods-Magic: The GatheringTests.debug.xcconfig */;
+			baseConfigurationReference = 4A816390742070B113C601C7 /* Pods-MagicTheGatheringTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3UNKQX6F;
-				INFOPLIST_FILE = "Magic: The GatheringTests/Info.plist";
+				INFOPLIST_FILE = MagicTheGatheringTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.tolosana.Magic--The-GatheringTests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.tolosana.MagicTheGatheringTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Magic: The Gathering.app/Magic: The Gathering";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicTheGathering.app/MagicTheGathering";
 			};
 			name = Debug;
 		};
 		60A0091A25FD5EB000A2941E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80CF946397F4EAFBDCC19B07 /* Pods-Magic: The GatheringTests.release.xcconfig */;
+			baseConfigurationReference = 413360A86AFA398A7089C43C /* Pods-MagicTheGatheringTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3UNKQX6F;
-				INFOPLIST_FILE = "Magic: The GatheringTests/Info.plist";
+				INFOPLIST_FILE = MagicTheGatheringTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.tolosana.Magic--The-GatheringTests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.tolosana.MagicTheGatheringTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Magic: The Gathering.app/Magic: The Gathering";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicTheGathering.app/MagicTheGathering";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		60A008E625FD5EAE00A2941E /* Build configuration list for PBXProject "Magic: The Gathering" */ = {
+		60A008E625FD5EAE00A2941E /* Build configuration list for PBXProject "MagicTheGathering" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60A0091325FD5EB000A2941E /* Debug */,
@@ -556,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60A0091525FD5EB000A2941E /* Build configuration list for PBXNativeTarget "Magic: The Gathering" */ = {
+		60A0091525FD5EB000A2941E /* Build configuration list for PBXNativeTarget "MagicTheGathering" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60A0091625FD5EB000A2941E /* Debug */,
@@ -565,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60A0091825FD5EB000A2941E /* Build configuration list for PBXNativeTarget "Magic: The GatheringTests" */ = {
+		60A0091825FD5EB000A2941E /* Build configuration list for PBXNativeTarget "MagicTheGatheringTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60A0091925FD5EB000A2941E /* Debug */,

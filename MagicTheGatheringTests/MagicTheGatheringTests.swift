@@ -1,14 +1,14 @@
 //
-//  Magic__The_GatheringTests.swift
+//  MagicTheGatheringTests.swift
 //  Magic: The GatheringTests
 //
 //  Created by Luis Maria Tolosana Simon on 13/3/21.
 //
 
 import XCTest
-@testable import Magic__The_Gathering
+@testable import MagicTheGathering
 
-class Magic__The_GatheringTests: XCTestCase {
+class MagicTheGatheringTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

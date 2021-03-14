@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '14.4'
 
-target 'Magic: The Gathering' do
+target 'MagicTheGathering' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -10,7 +10,7 @@ target 'Magic: The Gathering' do
   pod 'PromiseKit', '6.13.1'
   pod 'ObjectMapper', '4.2.0'
   
-  target 'Magic: The GatheringTests' do
+  target 'MagicTheGatheringTests' do
     inherit! :search_paths
     # Pods for testing
   end
