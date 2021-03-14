@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Magic: The Gathering
+//  MagicTheGathering
 //
 //  Created by Luis Maria Tolosana Simon on 13/3/21.
 //

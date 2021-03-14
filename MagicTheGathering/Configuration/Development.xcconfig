@@ -1,0 +1,21 @@
+//
+//  Development.xcconfig
+//  MagicTheGathering
+//
+//  Created by Luis Maria Tolosana Simon on 14/3/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-MagicTheGathering/Pods-MagicTheGathering.debug (development).xcconfig"
+#include "Pods/Target Support Files/Pods-MagicTheGathering/Pods-MagicTheGathering.release (development).xcconfig"
+
+#include "Pods/Target Support Files/Pods-MagicTheGatheringTests/Pods-MagicTheGatheringTests.debug (development).xcconfig"
+#include "Pods/Target Support Files/Pods-MagicTheGatheringTests/Pods-MagicTheGatheringTests.release (development).xcconfig"
+
+APP_ENVIRONMENT=Development
+
+// App Settings
+APP_NAME = MagicTheGathering (Dev)
+APP_BUNDLE_ID = io.tolosana.MagicTheGathering.dev

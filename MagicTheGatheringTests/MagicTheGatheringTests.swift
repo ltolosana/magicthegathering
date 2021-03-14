@@ -1,6 +1,6 @@
 //
 //  MagicTheGatheringTests.swift
-//  Magic: The GatheringTests
+//  MagicTheGatheringTests
 //
 //  Created by Luis Maria Tolosana Simon on 13/3/21.
 //
