@@ -14,8 +14,11 @@
 #include "Pods/Target Support Files/Pods-MagicTheGatheringTests/Pods-MagicTheGatheringTests.debug (development).xcconfig"
 #include "Pods/Target Support Files/Pods-MagicTheGatheringTests/Pods-MagicTheGatheringTests.release (development).xcconfig"
 
-APP_ENVIRONMENT=Development
+APP_ENVIRONMENT = Development
 
 // App Settings
-APP_NAME = MagicTheGathering (Dev)
+APP_NAME = Magic: The Gathering (Dev)
 APP_BUNDLE_ID = io.tolosana.MagicTheGathering.dev
+
+// API URL
+API_BASE_URL = https:/$()/api.magicthegathering.io
