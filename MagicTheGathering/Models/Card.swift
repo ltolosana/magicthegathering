@@ -30,7 +30,7 @@ struct Card: ImmutableMappable {
     private let colors: [String]
     private let type: String
     private let rarity: String
-    private let text: String
+    private let text: String?
     private let power: String?
     private let toughness: String?
     private let imageURL: String?
@@ -68,6 +68,7 @@ extension Card: CardModel {
     
     static let notApplicable = "-"
     static let emptyImage = ""
+    static let emptyText = ""
     
     func getId() -> String {
         return id
@@ -94,7 +95,7 @@ extension Card: CardModel {
     }
     
     func getText() -> String {
-        return text
+        return text ?? Card.emptyText
     }
     
     func getPower() -> String {
