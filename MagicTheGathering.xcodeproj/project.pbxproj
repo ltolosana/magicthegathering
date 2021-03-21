@@ -13,8 +13,6 @@
 		605D83B62603CA84007CC436 /* BaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83B52603CA84007CC436 /* BaseNetworkProvider.swift */; };
 		60A008EF25FD5EAE00A2941E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A008EE25FD5EAE00A2941E /* AppDelegate.swift */; };
 		60A008F125FD5EAE00A2941E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A008F025FD5EAE00A2941E /* SceneDelegate.swift */; };
-		60A008F325FD5EAE00A2941E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A008F225FD5EAE00A2941E /* ViewController.swift */; };
-		60A008F625FD5EAE00A2941E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A008F425FD5EAE00A2941E /* Main.storyboard */; };
 		60A008F825FD5EAF00A2941E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A008F725FD5EAF00A2941E /* Assets.xcassets */; };
 		60A008FB25FD5EAF00A2941E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A008F925FD5EAF00A2941E /* LaunchScreen.storyboard */; };
 		60A0090625FD5EB000A2941E /* MagicTheGatheringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0090525FD5EB000A2941E /* MagicTheGatheringTests.swift */; };
@@ -63,8 +61,6 @@
 		60A008EB25FD5EAE00A2941E /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A008EE25FD5EAE00A2941E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60A008F025FD5EAE00A2941E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		60A008F225FD5EAE00A2941E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		60A008F525FD5EAE00A2941E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60A008F725FD5EAF00A2941E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60A008FA25FD5EAF00A2941E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60A008FC25FD5EAF00A2941E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,12 +174,10 @@
 				60F6FEB025FE9BF40081CCA3 /* Configuration */,
 				60DC59672607D43E00CBA12A /* Extensions */,
 				60A008F925FD5EAF00A2941E /* LaunchScreen.storyboard */,
-				60A008F425FD5EAE00A2941E /* Main.storyboard */,
 				60238D6B2602B63400877DD2 /* Models */,
 				60DC59292607CE6200CBA12A /* Modules */,
 				605D83A72603C674007CC436 /* Providers */,
 				60A008F025FD5EAE00A2941E /* SceneDelegate.swift */,
-				60A008F225FD5EAE00A2941E /* ViewController.swift */,
 			);
 			path = MagicTheGathering;
 			sourceTree = "<group>";
@@ -375,7 +369,6 @@
 				60A008FB25FD5EAF00A2941E /* LaunchScreen.storyboard in Resources */,
 				60A008F825FD5EAF00A2941E /* Assets.xcassets in Resources */,
 				60DC59382607CF2600CBA12A /* CardsListView.xib in Resources */,
-				60A008F625FD5EAE00A2941E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +475,6 @@
 				60DC59352607CF2600CBA12A /* CardsListBuilder.swift in Sources */,
 				60DC59692607D44D00CBA12A /* UIViewControllerExtension.swift in Sources */,
 				60DC59622607D06000CBA12A /* BaseViewController.swift in Sources */,
-				60A008F325FD5EAE00A2941E /* ViewController.swift in Sources */,
 				60DC59362607CF2600CBA12A /* CardsListInteractor.swift in Sources */,
 				60E6EFDC260003C900C884A8 /* Environment.swift in Sources */,
 				60DC593A2607CF2600CBA12A /* CardsListWireframe.swift in Sources */,
@@ -518,14 +510,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		60A008F425FD5EAE00A2941E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60A008F525FD5EAE00A2941E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		60A008F925FD5EAF00A2941E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
