@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		60238D6D2602B65000877DD2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60238D6C2602B65000877DD2 /* Card.swift */; };
+		605D83AC2603C71C007CC436 /* MagicNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83AB2603C71C007CC436 /* MagicNetworkProvider.swift */; };
+		605D83B22603CA10007CC436 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83B12603CA10007CC436 /* NetworkConstants.swift */; };
+		605D83B62603CA84007CC436 /* BaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83B52603CA84007CC436 /* BaseNetworkProvider.swift */; };
 		60A008EF25FD5EAE00A2941E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A008EE25FD5EAE00A2941E /* AppDelegate.swift */; };
 		60A008F125FD5EAE00A2941E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A008F025FD5EAE00A2941E /* SceneDelegate.swift */; };
 		60A008F325FD5EAE00A2941E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A008F225FD5EAE00A2941E /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 		556C816AD00E53BA4F9F76CF /* Pods-MagicTheGathering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGathering.debug.xcconfig"; path = "Target Support Files/Pods-MagicTheGathering/Pods-MagicTheGathering.debug.xcconfig"; sourceTree = "<group>"; };
 		5AD9189E817E2483D3414D07 /* Pods_MagicTheGatheringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTheGatheringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60238D6C2602B65000877DD2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		605D83AB2603C71C007CC436 /* MagicNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicNetworkProvider.swift; sourceTree = "<group>"; };
+		605D83B12603CA10007CC436 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		605D83B52603CA84007CC436 /* BaseNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkProvider.swift; sourceTree = "<group>"; };
 		60A008EB25FD5EAE00A2941E /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A008EE25FD5EAE00A2941E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60A008F025FD5EAE00A2941E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,32 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		605D83A72603C674007CC436 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				605D83A92603C6DD007CC436 /* Network */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		605D83A92603C6DD007CC436 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				605D83B52603CA84007CC436 /* BaseNetworkProvider.swift */,
+				605D83AA2603C6E5007CC436 /* Gateways */,
+				605D83B12603CA10007CC436 /* NetworkConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		605D83AA2603C6E5007CC436 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				605D83AB2603C71C007CC436 /* MagicNetworkProvider.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
 		60A008E225FD5EAE00A2941E = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +151,7 @@
 				60A008F925FD5EAF00A2941E /* LaunchScreen.storyboard */,
 				60A008F425FD5EAE00A2941E /* Main.storyboard */,
 				60238D6B2602B63400877DD2 /* Models */,
+				605D83A72603C674007CC436 /* Providers */,
 				60A008F025FD5EAE00A2941E /* SceneDelegate.swift */,
 				60A008F225FD5EAE00A2941E /* ViewController.swift */,
 			);
@@ -359,9 +392,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605D83B22603CA10007CC436 /* NetworkConstants.swift in Sources */,
 				60A008F325FD5EAE00A2941E /* ViewController.swift in Sources */,
 				60E6EFDC260003C900C884A8 /* Environment.swift in Sources */,
 				60238D6D2602B65000877DD2 /* Card.swift in Sources */,
+				605D83B62603CA84007CC436 /* BaseNetworkProvider.swift in Sources */,
+				605D83AC2603C71C007CC436 /* MagicNetworkProvider.swift in Sources */,
 				60A008EF25FD5EAE00A2941E /* AppDelegate.swift in Sources */,
 				60A008F125FD5EAE00A2941E /* SceneDelegate.swift in Sources */,
 			);
