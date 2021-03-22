@@ -65,10 +65,7 @@ class BaseWireframe {
             if let modalStyle = modalPresentationStyle {
                 navigation.modalPresentationStyle = modalStyle
             }
-            DispatchQueue.main.async {
-                view?.present(navigation, animated: animated, completion: completion)
-            }
-            
+            view?.present(navigation, animated: animated, completion: completion)
         }
     }
     

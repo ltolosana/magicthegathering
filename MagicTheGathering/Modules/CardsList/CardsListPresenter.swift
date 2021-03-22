@@ -21,6 +21,8 @@ class CardsListPresenter: BasePresenter, CardsListPresenterContract {
     
     func viewDidLoad() {
 
+        view.title = "Magic Cards List"
+        
         firstly {
             interactor.getCardsList()
         }.done { [weak self] cardsListData in
