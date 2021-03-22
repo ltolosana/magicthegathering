@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CardsListCollectionViewCell: UICollectionViewCell {
 
@@ -20,6 +21,13 @@ class CardsListCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpData(card: Card) {
+        if let url = URL(string: card.getImageURL()) {
+            cardImageView.sd_setImage(with: url, completed: nil)
+            
+        } else {
+            cardImageView.image = UIImage(systemName: "questionmark.square")
+        }
+        
         cardNameLabel.text = card.getName()
     }
 

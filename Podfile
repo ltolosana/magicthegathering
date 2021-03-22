@@ -10,6 +10,7 @@ target 'MagicTheGathering' do
   pod 'AlamofireImage', '4.1.0'
   pod 'PromiseKit', '6.13.1'
   pod 'ObjectMapper', '4.2.0'
+  pod 'SDWebImage', '5.10.4'
   
   target 'MagicTheGatheringTests' do
     inherit! :search_paths
