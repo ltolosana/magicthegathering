@@ -41,6 +41,7 @@
 		60DC597A2607EF4100CBA12A /* CardsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DC59782607EF4100CBA12A /* CardsListCollectionViewCell.swift */; };
 		60DC597B2607EF4100CBA12A /* CardsListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DC59792607EF4100CBA12A /* CardsListCollectionViewCell.xib */; };
 		60E6EFDC260003C900C884A8 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E6EFDB260003C900C884A8 /* Environment.swift */; };
+		60EB9D552609303700346991 /* Magicmedieval-pRV1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60EB9D5226092F3A00346991 /* Magicmedieval-pRV1.ttf */; };
 		6C1B8284A67AC6B0597B385D /* Pods_MagicTheGatheringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD9189E817E2483D3414D07 /* Pods_MagicTheGatheringTests.framework */; };
 		7B73BA6C97777621FBB439E9 /* Pods_MagicTheGathering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE18737FFE4AC11B8C46C736 /* Pods_MagicTheGathering.framework */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,7 @@
 		60DC59782607EF4100CBA12A /* CardsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListCollectionViewCell.swift; sourceTree = "<group>"; };
 		60DC59792607EF4100CBA12A /* CardsListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsListCollectionViewCell.xib; sourceTree = "<group>"; };
 		60E6EFDB260003C900C884A8 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		60EB9D5226092F3A00346991 /* Magicmedieval-pRV1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Magicmedieval-pRV1.ttf"; sourceTree = "<group>"; };
 		60F6FEB125FE9C680081CCA3 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		60F6FEB225FE9CD00081CCA3 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		B0936617083295DD7F5764D6 /* Pods-MagicTheGatheringTests.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGatheringTests.debug (production).xcconfig"; path = "Target Support Files/Pods-MagicTheGatheringTests/Pods-MagicTheGatheringTests.debug (production).xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				60A008F725FD5EAF00A2941E /* Assets.xcassets */,
 				60F6FEB025FE9BF40081CCA3 /* Configuration */,
 				60DC59672607D43E00CBA12A /* Extensions */,
+				60EB9D5126092F2500346991 /* fonts */,
 				60A008F925FD5EAF00A2941E /* LaunchScreen.storyboard */,
 				60238D6B2602B63400877DD2 /* Models */,
 				60DC59292607CE6200CBA12A /* Modules */,
@@ -295,6 +298,14 @@
 				60DC59792607EF4100CBA12A /* CardsListCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		60EB9D5126092F2500346991 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				60EB9D5226092F3A00346991 /* Magicmedieval-pRV1.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		60F6FEB025FE9BF40081CCA3 /* Configuration */ = {
@@ -422,6 +433,7 @@
 			files = (
 				60DC597B2607EF4100CBA12A /* CardsListCollectionViewCell.xib in Resources */,
 				60A008FB25FD5EAF00A2941E /* LaunchScreen.storyboard in Resources */,
+				60EB9D552609303700346991 /* Magicmedieval-pRV1.ttf in Resources */,
 				6020683026090008001B0E02 /* CardDetailView.xib in Resources */,
 				60A008F825FD5EAF00A2941E /* Assets.xcassets in Resources */,
 				60DC59382607CF2600CBA12A /* CardsListView.xib in Resources */,
