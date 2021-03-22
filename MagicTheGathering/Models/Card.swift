@@ -67,8 +67,8 @@ struct Card: ImmutableMappable {
 extension Card: CardModel {
     
     static let notApplicable = "-"
-    static let emptyImage = ""
-    static let emptyText = ""
+    static let emptyImage = "<No image available>"
+    static let emptyText = "<No description>"
     
     func getId() -> String {
         return id
