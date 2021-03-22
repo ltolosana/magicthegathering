@@ -13,28 +13,17 @@ import UIKit
 class CardDetailWireframe: BaseWireframe, CardDetailWireframeContract {
     weak var output: CardDetailWireframeOutputContract!
     weak var view: UIViewController!
-
-//    weak var loadingDelegate: LoadingViewDelegate!
     
-
     /// Show basic loading
     /// - Parameters:
     ///   - text: text
     func showBasicLoading(text: String) {
-//        let loadingVC = LoadingViewController()
-//        self.loadingDelegate = loadingVC
-//
-//        self.presentView(from: self.view, useCase: loadingVC, withTransition: .modal,
-//                         modalPresentationStyle: .overCurrentContext, animated: false, completion: {
-//            loadingVC.updateTitle(with: text)
-//        })
+        
     }
     
     /// Hide basic loading
     func hideBasicLoading(completion: @escaping (() -> Void)) {
-//        self.loadingDelegate?.dismiss {
-//            completion()
-//        }
+        
     }
     
 }
