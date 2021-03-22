@@ -18,6 +18,7 @@ protocol CardsListEntityContract: BaseEntity {
 protocol CardsListViewContract: BaseViewController {
     var presenter: CardsListPresenterContract! { get set }
     
+    func updateCardsData(cards: [Card])
 }
 
 protocol CardsListPresenterContract: BasePresenter {
@@ -32,6 +33,8 @@ protocol CardsListPresenterContract: BasePresenter {
 
 protocol CardsListInteractorContract: BaseInteractor {
     var output: CardsListInteractorOutputContract! {get set}
+    
+    func getCardsList() -> Promise<[Card]>
 }
 
 protocol CardsListInteractorOutputContract: class {
@@ -44,6 +47,8 @@ protocol CardsListWireframeContract: BaseWireframe {
     
     func showBasicLoading(text: String)
     func hideBasicLoading(completion: @escaping (() -> Void))
+    
+    func feedbackError(error: Error)
 }
 
 protocol CardsListWireframeOutputContract: class {

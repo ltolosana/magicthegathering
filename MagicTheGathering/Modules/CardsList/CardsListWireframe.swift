@@ -16,7 +16,6 @@ class CardsListWireframe: BaseWireframe, CardsListWireframeContract {
 
 //    weak var loadingDelegate: LoadingViewDelegate!
     
-
     /// Show basic loading
     /// - Parameters:
     ///   - text: text
@@ -35,6 +34,18 @@ class CardsListWireframe: BaseWireframe, CardsListWireframeContract {
 //        self.loadingDelegate?.dismiss {
 //            completion()
 //        }
+    }
+    
+    func feedbackError(error: Error) {
+        switch error {
+        case MagicNetworkProvider.MagicNetworkError.pageLoadError:
+            showCustomModalAlert(view, title: "Error loading data",
+                                 content: "An error ocurred loading cards.\nPlease, try it again later.\nThank you.",
+                                 completion: nil)
+        default:
+            showCustomModalAlert(view, title: "Error", content: "Please, try it again later.\nThank you.", completion: nil)
+        }
+        
     }
     
 }

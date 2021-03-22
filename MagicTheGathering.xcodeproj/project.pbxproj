@@ -30,6 +30,8 @@
 		60DC59612607D06000CBA12A /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DC595D2607D06000CBA12A /* BaseWireframe.swift */; };
 		60DC59622607D06000CBA12A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DC595E2607D06000CBA12A /* BaseViewController.swift */; };
 		60DC59692607D44D00CBA12A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DC59682607D44D00CBA12A /* UIViewControllerExtension.swift */; };
+		60DC597A2607EF4100CBA12A /* CardsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DC59782607EF4100CBA12A /* CardsListCollectionViewCell.swift */; };
+		60DC597B2607EF4100CBA12A /* CardsListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DC59792607EF4100CBA12A /* CardsListCollectionViewCell.xib */; };
 		60E6EFDC260003C900C884A8 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E6EFDB260003C900C884A8 /* Environment.swift */; };
 		6C1B8284A67AC6B0597B385D /* Pods_MagicTheGatheringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD9189E817E2483D3414D07 /* Pods_MagicTheGatheringTests.framework */; };
 		7B73BA6C97777621FBB439E9 /* Pods_MagicTheGathering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE18737FFE4AC11B8C46C736 /* Pods_MagicTheGathering.framework */; };
@@ -81,6 +83,8 @@
 		60DC595D2607D06000CBA12A /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		60DC595E2607D06000CBA12A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		60DC59682607D44D00CBA12A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		60DC59782607EF4100CBA12A /* CardsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		60DC59792607EF4100CBA12A /* CardsListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsListCollectionViewCell.xib; sourceTree = "<group>"; };
 		60E6EFDB260003C900C884A8 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		60F6FEB125FE9C680081CCA3 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		60F6FEB225FE9CD00081CCA3 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				60DC59302607CF2600CBA12A /* CardsListView.xib */,
+				60DC59772607EEE300CBA12A /* CollectionViewCell */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -241,6 +246,15 @@
 				60DC59682607D44D00CBA12A /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		60DC59772607EEE300CBA12A /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				60DC59782607EF4100CBA12A /* CardsListCollectionViewCell.swift */,
+				60DC59792607EF4100CBA12A /* CardsListCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		60F6FEB025FE9BF40081CCA3 /* Configuration */ = {
@@ -366,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60DC597B2607EF4100CBA12A /* CardsListCollectionViewCell.xib in Resources */,
 				60A008FB25FD5EAF00A2941E /* LaunchScreen.storyboard in Resources */,
 				60A008F825FD5EAF00A2941E /* Assets.xcassets in Resources */,
 				60DC59382607CF2600CBA12A /* CardsListView.xib in Resources */,
@@ -474,6 +489,7 @@
 				605D83B22603CA10007CC436 /* NetworkConstants.swift in Sources */,
 				60DC59352607CF2600CBA12A /* CardsListBuilder.swift in Sources */,
 				60DC59692607D44D00CBA12A /* UIViewControllerExtension.swift in Sources */,
+				60DC597A2607EF4100CBA12A /* CardsListCollectionViewCell.swift in Sources */,
 				60DC59622607D06000CBA12A /* BaseViewController.swift in Sources */,
 				60DC59362607CF2600CBA12A /* CardsListInteractor.swift in Sources */,
 				60E6EFDC260003C900C884A8 /* Environment.swift in Sources */,

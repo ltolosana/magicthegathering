@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 class CardsListPresenter: BasePresenter, CardsListPresenterContract {
 
@@ -16,12 +17,22 @@ class CardsListPresenter: BasePresenter, CardsListPresenterContract {
     var entity: CardsListEntityContract!
     var wireframe: CardsListWireframeContract!
 
+    var cardsList: [Card] = []
+    
     func viewDidLoad() {
 
+        firstly {
+            interactor.getCardsList()
+        }.done { [weak self] cardsListData in
+            self?.cardsList = cardsListData
+            self?.view.updateCardsData(cards: cardsListData)
+        }.catch { error in
+            self.wireframe.feedbackError(error: error)
+        }
     }
 
     func viewWillAppear() {
-
+        
     }
 }
 

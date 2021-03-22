@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 class CardsListInteractor: BaseInteractor, CardsListInteractorContract {
     weak var output: CardsListInteractorOutputContract!
@@ -17,4 +18,9 @@ class CardsListInteractor: BaseInteractor, CardsListInteractorContract {
     init (magicProvider: MagicProviderContract) {
         self.magicProvider = magicProvider
     }
+    
+    // MARK: - Public Methods
+    func getCardsList() -> Promise<[Card]> {
+        return self.magicProvider.getCards()
+    }   
 }
