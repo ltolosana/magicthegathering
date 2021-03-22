@@ -18,10 +18,10 @@ class CardsListPresenter: BasePresenter, CardsListPresenterContract {
     var wireframe: CardsListWireframeContract!
     
     var cardsList: [Card] = []
-    
+
     func viewDidLoad() {
         
-        view.title = "Magic Cards List"
+        setUpNavigationTitle()
         
         firstly {
             interactor.getCardsList()
@@ -47,6 +47,15 @@ class CardsListPresenter: BasePresenter, CardsListPresenterContract {
                                            content: "Selected card not found\nPlease select another card.",
                                            completion: nil)
         }
+    }
+    
+    private func setUpNavigationTitle() {
+        if let magicFontTitle = UIFont(name: "MagicMedieval", size: 24) {
+            let attributes = [NSAttributedString.Key.font: magicFontTitle]
+            view.navigationController?.navigationBar.titleTextAttributes = attributes
+        }
+        
+        view.title = "Magic Cards List"
     }
 }
 
