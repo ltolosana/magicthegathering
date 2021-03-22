@@ -41,6 +41,7 @@ class CardsListView: BaseViewController, CardsListViewContract {
                                 forCellWithReuseIdentifier: CardsListCollectionViewCell.cellId)
         
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }
 
@@ -59,5 +60,10 @@ extension CardsListView: UICollectionViewDataSource {
         return cell
         
     }
-    
+}
+
+extension CardsListView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.selectCardItem(index: indexPath.item)
+    }
 }

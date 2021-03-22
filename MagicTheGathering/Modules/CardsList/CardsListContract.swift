@@ -29,6 +29,8 @@ protocol CardsListPresenterContract: BasePresenter {
 
     func viewDidLoad()
     func viewWillAppear()
+    
+    func selectCardItem(index: Int)
 }
 
 protocol CardsListInteractorContract: BaseInteractor {
@@ -49,6 +51,7 @@ protocol CardsListWireframeContract: BaseWireframe {
     func hideBasicLoading(completion: @escaping (() -> Void))
     
     func feedbackError(error: Error)
+    func showDetailCardView(card: Card)
 }
 
 protocol CardsListWireframeOutputContract: class {

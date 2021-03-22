@@ -35,6 +35,10 @@ class CardsListWireframe: BaseWireframe, CardsListWireframeContract {
         default:
             showCustomModalAlert(view, title: "Error", content: "Please, try it again later.\nThank you.", completion: nil)
         }
-        
+    }
+    
+    func showDetailCardView(card: Card) {
+        let detailModule = CardDetailBuilder.build(card: card)
+        self.presentView(from: view, useCase: detailModule, withTransition: .navigationBar, completion: nil)
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 
 class CardDetailBuilder {
 
-    static func build() -> CardDetailView {
+    static func build(card: Card) -> CardDetailView {
         let view = CardDetailView.init(nibName: String(describing: CardDetailView.self), bundle: nil)
         let presenter = CardDetailPresenter()
         let entity = CardDetailEntity()
