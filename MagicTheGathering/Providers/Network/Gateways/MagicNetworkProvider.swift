@@ -8,9 +8,11 @@
 import Foundation
 import PromiseKit
 import Alamofire
+import AlamofireImage
 
 protocol MagicProviderContract {
     func getCards() -> Promise<[Card]>
+    func getCardImage(stringURL: String) -> Promise<UIImage>
 }
 
 class MagicNetworkProvider: BaseNetworkProvider, MagicProviderContract {
@@ -20,6 +22,8 @@ class MagicNetworkProvider: BaseNetworkProvider, MagicProviderContract {
     
     enum MagicNetworkError: Error {
         case pageLoadError
+        case badImageURL
+        case imageNotFound
     }
     
     func getCards() -> Promise<[Card]> {
@@ -46,6 +50,26 @@ class MagicNetworkProvider: BaseNetworkProvider, MagicProviderContract {
                 } catch {
                     promise.reject(NetworkError.badResponse)
                 }
+            }
+        }
+    }
+    
+    func getCardImage(stringURL: String) -> Promise<UIImage> {
+
+        return Promise<UIImage> { promise in
+            guard let url = URL(string: stringURL) else {
+                promise.reject(MagicNetworkError.badImageURL)
+                return
+            }
+            AF.request(url).responseImage { response in
+
+                switch response.result {
+                case .success(let image):
+                    promise.fulfill(image)
+                case .failure:
+                    promise.reject(MagicNetworkError.imageNotFound)
+                }
+ 
             }
         }
     }

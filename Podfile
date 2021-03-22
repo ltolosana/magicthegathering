@@ -7,6 +7,7 @@ target 'MagicTheGathering' do
 
   # Pods for Magic: The Gathering
   pod 'Alamofire', '5.4.1'
+  pod 'AlamofireImage', '4.1.0'
   pod 'PromiseKit', '6.13.1'
   pod 'ObjectMapper', '4.2.0'
   
