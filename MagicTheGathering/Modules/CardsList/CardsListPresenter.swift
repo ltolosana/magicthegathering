@@ -21,7 +21,7 @@ class CardsListPresenter: BasePresenter, CardsListPresenterContract {
 
     func viewDidLoad() {
         
-        setUpNavigationTitle()
+        view.setUpNavigationTitle(title: "Magic Cards List")
         
         firstly {
             interactor.getCardsList()
@@ -47,15 +47,6 @@ class CardsListPresenter: BasePresenter, CardsListPresenterContract {
                                            content: "Selected card not found\nPlease select another card.",
                                            completion: nil)
         }
-    }
-    
-    private func setUpNavigationTitle() {
-        if let magicFontTitle = UIFont(name: "MagicMedieval", size: 24) {
-            let attributes = [NSAttributedString.Key.font: magicFontTitle]
-            view.navigationController?.navigationBar.titleTextAttributes = attributes
-        }
-        
-        view.title = "Magic Cards List"
     }
 }
 

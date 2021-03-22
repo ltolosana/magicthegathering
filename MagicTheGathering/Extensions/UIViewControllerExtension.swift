@@ -23,4 +23,13 @@ extension UIViewController {
         return nil
     }
     
+    func setUpNavigationTitle(title: String) {
+        if let magicFontTitle = UIFont(name: "MagicMedieval", size: 24) {
+            let attributes = [NSAttributedString.Key.font: magicFontTitle]
+            self.navigationController?.navigationBar.titleTextAttributes = attributes
+        }
+        
+        self.title = title
+    }
+    
 }
