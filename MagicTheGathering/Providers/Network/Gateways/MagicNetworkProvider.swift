@@ -31,7 +31,7 @@ class MagicNetworkProvider: BaseNetworkProvider, MagicProviderContract {
         
         return Promise<[Card]> { promise in
             
-            AF.request(fullPathCardsURL()).responseJSON { response in
+            sessionManager.request(fullPathCardsURL()).responseJSON { response in
                 do {
                     let responseData = try response.result.get() as? [String: Any]
                     guard let results = responseData?["cards"] as? [[String: Any]] else {
@@ -61,7 +61,7 @@ class MagicNetworkProvider: BaseNetworkProvider, MagicProviderContract {
                 promise.reject(MagicNetworkError.badImageURL)
                 return
             }
-            AF.request(url).responseImage { response in
+            sessionManager.request(url).responseImage { response in
 
                 switch response.result {
                 case .success(let image):
