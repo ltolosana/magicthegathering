@@ -25,7 +25,7 @@ class CardsListCollectionViewCell: UICollectionViewCell {
             cardImageView.sd_setImage(with: url, completed: nil)
             
         } else {
-            cardImageView.image = UIImage(systemName: "questionmark.square")
+            cardImageView.image = UIImage(named: Constants.placeholderMagicCard)
         }
         
         cardNameLabel.text = card.getName()

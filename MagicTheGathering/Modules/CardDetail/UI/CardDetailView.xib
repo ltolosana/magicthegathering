@@ -36,7 +36,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JZd-zN-yT2" userLabel="mainStackView">
                     <rect key="frame" x="16" y="59.999999999999972" width="358" height="433.33333333333326"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="W8q-Pd-pM8">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magicCard" translatesAutoresizingMaskIntoConstraints="NO" id="W8q-Pd-pM8">
                             <rect key="frame" x="0.0" y="0.0" width="358" height="310"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pi1-AC-YBN" userLabel="propertiesStackView">
@@ -203,6 +203,6 @@
         </view>
     </objects>
     <resources>
-        <image name="placeholder.jpeg" width="167.25" height="232.5"/>
+        <image name="magicCard" width="224" height="310"/>
     </resources>
 </document>

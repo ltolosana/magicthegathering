@@ -50,7 +50,7 @@ class CardDetailView: BaseViewController, CardDetailViewContract {
             cardImageView.sd_setImage(with: url, completed: nil)
             
         } else {
-            cardImageView.image = UIImage(systemName: "questionmark.square")
+            cardImageView.image = UIImage(named: Constants.placeholderMagicCard)
         }
         
         populateData(card: card)
@@ -110,7 +110,6 @@ extension CardDetailView {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        print("TRAITCOLLECTIONCHANGE")
         configureStackViews()
     }
 }
