@@ -14,10 +14,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let magicCardsViewController = CardsListBuilder.build()
-        let navigationViewController = UINavigationController(rootViewController: magicCardsViewController)
-
-        window.rootViewController = navigationViewController
+        
+        let mainVC = MainTabBarBuilder.build()
+        
+        window.rootViewController = mainVC
 
         self.window = window
         window.makeKeyAndVisible()

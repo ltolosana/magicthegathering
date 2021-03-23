@@ -8,5 +8,9 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+
+}
+
+class BaseTabBarController: UITabBarController {
     
 }

@@ -24,7 +24,7 @@ extension UIViewController {
     }
     
     func setUpNavigationTitle(title: String) {
-        if let magicFontTitle = UIFont(name: "MagicMedieval", size: 24) {
+        if let magicFontTitle = UIFont(name: Constants.magicFont, size: 24) {
             let attributes = [NSAttributedString.Key.font: magicFontTitle]
             self.navigationController?.navigationBar.titleTextAttributes = attributes
         }
@@ -32,4 +32,10 @@ extension UIViewController {
         self.title = title
     }
     
+    func setUpTabBarItemFont(fontSize: CGFloat, color: UIColor ) {
+        if let magicFontTitle = UIFont(name: Constants.magicFont, size: fontSize) {
+            let attributes = [NSAttributedString.Key.font: magicFontTitle, NSAttributedString.Key.foregroundColor: color]
+            self.tabBarItem?.setTitleTextAttributes(attributes, for: .normal)
+        }
+    }
 }

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6007C7BC260A1F1B00195155 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7BB260A1F1B00195155 /* Constants.swift */; };
+		6007C7F4260A51D800195155 /* MainTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7EC260A51D800195155 /* MainTabBarContract.swift */; };
+		6007C7F5260A51D800195155 /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7ED260A51D800195155 /* MainTabBarPresenter.swift */; };
+		6007C7F6260A51D800195155 /* MainTabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7EE260A51D800195155 /* MainTabBarBuilder.swift */; };
+		6007C7F7260A51D800195155 /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7EF260A51D800195155 /* MainTabBarInteractor.swift */; };
+		6007C7F8260A51D800195155 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7F0260A51D800195155 /* MainTabBarView.swift */; };
+		6007C7F9260A51D800195155 /* MainTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6007C7F1260A51D800195155 /* MainTabBarView.xib */; };
+		6007C7FA260A51D800195155 /* MainTabBarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7F2260A51D800195155 /* MainTabBarEntity.swift */; };
+		6007C7FB260A51D800195155 /* MainTabBarWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7F3260A51D800195155 /* MainTabBarWireframe.swift */; };
 		6020682B26090008001B0E02 /* CardDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020682326090008001B0E02 /* CardDetailContract.swift */; };
 		6020682C26090008001B0E02 /* CardDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020682426090008001B0E02 /* CardDetailPresenter.swift */; };
 		6020682D26090008001B0E02 /* CardDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020682526090008001B0E02 /* CardDetailBuilder.swift */; };
@@ -67,6 +75,14 @@
 		556C816AD00E53BA4F9F76CF /* Pods-MagicTheGathering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGathering.debug.xcconfig"; path = "Target Support Files/Pods-MagicTheGathering/Pods-MagicTheGathering.debug.xcconfig"; sourceTree = "<group>"; };
 		5AD9189E817E2483D3414D07 /* Pods_MagicTheGatheringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTheGatheringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6007C7BB260A1F1B00195155 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6007C7EC260A51D800195155 /* MainTabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContract.swift; sourceTree = "<group>"; };
+		6007C7ED260A51D800195155 /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
+		6007C7EE260A51D800195155 /* MainTabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarBuilder.swift; sourceTree = "<group>"; };
+		6007C7EF260A51D800195155 /* MainTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarInteractor.swift; sourceTree = "<group>"; };
+		6007C7F0260A51D800195155 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		6007C7F1260A51D800195155 /* MainTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarView.xib; sourceTree = "<group>"; };
+		6007C7F2260A51D800195155 /* MainTabBarEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarEntity.swift; sourceTree = "<group>"; };
+		6007C7F3260A51D800195155 /* MainTabBarWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarWireframe.swift; sourceTree = "<group>"; };
 		6020682326090008001B0E02 /* CardDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailContract.swift; sourceTree = "<group>"; };
 		6020682426090008001B0E02 /* CardDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailPresenter.swift; sourceTree = "<group>"; };
 		6020682526090008001B0E02 /* CardDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailBuilder.swift; sourceTree = "<group>"; };
@@ -136,6 +152,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6007C7EB260A51A300195155 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6007C7EE260A51D800195155 /* MainTabBarBuilder.swift */,
+				6007C7EC260A51D800195155 /* MainTabBarContract.swift */,
+				6007C7F2260A51D800195155 /* MainTabBarEntity.swift */,
+				6007C7EF260A51D800195155 /* MainTabBarInteractor.swift */,
+				6007C7ED260A51D800195155 /* MainTabBarPresenter.swift */,
+				6007C7F0260A51D800195155 /* MainTabBarView.swift */,
+				6007C7F3260A51D800195155 /* MainTabBarWireframe.swift */,
+				6007C800260A522E00195155 /* UI */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		6007C800260A522E00195155 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6007C7F1260A51D800195155 /* MainTabBarView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		602068222608FFEA001B0E02 /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +285,7 @@
 				602068222608FFEA001B0E02 /* CardDetail */,
 				60DC592A2607CECF00CBA12A /* CardsList */,
 				6007C7BB260A1F1B00195155 /* Constants.swift */,
+				6007C7EB260A51A300195155 /* MainTabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -437,6 +477,7 @@
 				60DC597B2607EF4100CBA12A /* CardsListCollectionViewCell.xib in Resources */,
 				60A008FB25FD5EAF00A2941E /* LaunchScreen.storyboard in Resources */,
 				60EB9D552609303700346991 /* Magicmedieval-pRV1.ttf in Resources */,
+				6007C7F9260A51D800195155 /* MainTabBarView.xib in Resources */,
 				6020683026090008001B0E02 /* CardDetailView.xib in Resources */,
 				60A008F825FD5EAF00A2941E /* Assets.xcassets in Resources */,
 				60DC59382607CF2600CBA12A /* CardsListView.xib in Resources */,
@@ -540,14 +581,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DC59342607CF2600CBA12A /* CardsListPresenter.swift in Sources */,
+				6007C7F8260A51D800195155 /* MainTabBarView.swift in Sources */,
 				60DC59602607D06000CBA12A /* BaseEntity.swift in Sources */,
 				60DC59582607D05500CBA12A /* BasePresenter.swift in Sources */,
 				6020682F26090008001B0E02 /* CardDetailView.swift in Sources */,
+				6007C7F4260A51D800195155 /* MainTabBarContract.swift in Sources */,
 				605D83B22603CA10007CC436 /* NetworkConstants.swift in Sources */,
+				6007C7FB260A51D800195155 /* MainTabBarWireframe.swift in Sources */,
 				6007C7BC260A1F1B00195155 /* Constants.swift in Sources */,
 				6020682E26090008001B0E02 /* CardDetailInteractor.swift in Sources */,
 				60DC59352607CF2600CBA12A /* CardsListBuilder.swift in Sources */,
 				60DC59692607D44D00CBA12A /* UIViewControllerExtension.swift in Sources */,
+				6007C7F6260A51D800195155 /* MainTabBarBuilder.swift in Sources */,
 				6020682D26090008001B0E02 /* CardDetailBuilder.swift in Sources */,
 				60DC597A2607EF4100CBA12A /* CardsListCollectionViewCell.swift in Sources */,
 				60DC59622607D06000CBA12A /* BaseViewController.swift in Sources */,
@@ -556,6 +601,7 @@
 				60E6EFDC260003C900C884A8 /* Environment.swift in Sources */,
 				6020682C26090008001B0E02 /* CardDetailPresenter.swift in Sources */,
 				6020682B26090008001B0E02 /* CardDetailContract.swift in Sources */,
+				6007C7FA260A51D800195155 /* MainTabBarEntity.swift in Sources */,
 				60DC593A2607CF2600CBA12A /* CardsListWireframe.swift in Sources */,
 				60238D6D2602B65000877DD2 /* Card.swift in Sources */,
 				605D83B62603CA84007CC436 /* BaseNetworkProvider.swift in Sources */,
@@ -563,8 +609,10 @@
 				6020683126090008001B0E02 /* CardDetailEntity.swift in Sources */,
 				60A008EF25FD5EAE00A2941E /* AppDelegate.swift in Sources */,
 				60DC59372607CF2600CBA12A /* CardsListView.swift in Sources */,
+				6007C7F5260A51D800195155 /* MainTabBarPresenter.swift in Sources */,
 				60A008F125FD5EAE00A2941E /* SceneDelegate.swift in Sources */,
 				60DC59612607D06000CBA12A /* BaseWireframe.swift in Sources */,
+				6007C7F7260A51D800195155 /* MainTabBarInteractor.swift in Sources */,
 				60DC59392607CF2600CBA12A /* CardsListEntity.swift in Sources */,
 				60DC595F2607D06000CBA12A /* BaseInteractor.swift in Sources */,
 				60DC59332607CF2600CBA12A /* CardsListContract.swift in Sources */,

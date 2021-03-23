@@ -9,4 +9,5 @@ import Foundation
 
 enum Constants {
     static let placeholderMagicCard = "magicCard"
+    static let magicFont = "MagicMedieval"
 }
