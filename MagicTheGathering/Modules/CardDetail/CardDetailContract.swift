@@ -18,6 +18,7 @@ protocol CardDetailEntityContract: BaseEntity {
 protocol CardDetailViewContract: BaseViewController {
     var presenter: CardDetailPresenterContract! { get set }
     
+    func reloadViewWithData(card: Card)
 }
 
 protocol CardDetailPresenterContract: BasePresenter {
@@ -32,6 +33,8 @@ protocol CardDetailPresenterContract: BasePresenter {
 
 protocol CardDetailInteractorContract: BaseInteractor {
     var output: CardDetailInteractorOutputContract! {get set}
+    
+    func getCardData() -> Card
 }
 
 protocol CardDetailInteractorOutputContract: class {

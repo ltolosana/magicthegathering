@@ -13,8 +13,14 @@ class CardDetailInteractor: BaseInteractor, CardDetailInteractorContract {
     weak var output: CardDetailInteractorOutputContract!
 
     var magicNetworkProvider: MagicProviderContract
+    var card: Card
     
-    init (provider: MagicProviderContract) {
+    init (provider: MagicProviderContract, card: Card) {
         self.magicNetworkProvider = provider
+        self.card = card
+    }
+    
+    func getCardData() -> Card {
+        return card
     }
 }

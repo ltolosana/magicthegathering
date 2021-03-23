@@ -18,7 +18,7 @@ class CardDetailBuilder {
         let wireframe = CardDetailWireframe()
         
         let provider = MagicNetworkProvider()
-        let interactor = CardDetailInteractor(provider: provider)
+        let interactor = CardDetailInteractor(provider: provider, card: card)
         
         view.presenter = presenter
         view.presenter.view = view

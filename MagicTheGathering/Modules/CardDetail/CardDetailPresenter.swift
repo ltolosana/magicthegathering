@@ -17,14 +17,15 @@ class CardDetailPresenter: BasePresenter, CardDetailPresenterContract {
     var wireframe: CardDetailWireframeContract!
 
     func viewDidLoad() {
-
+        let cardData = interactor.getCardData()
+        view.setUpNavigationTitle(title: cardData.getName())
+        view.reloadViewWithData(card: cardData)
     }
 
     func viewWillAppear() {
 
     }
 }
-
 
 // MARK: - CardDetailInteractorOutputContract
 extension CardDetailPresenter: CardDetailInteractorOutputContract {
