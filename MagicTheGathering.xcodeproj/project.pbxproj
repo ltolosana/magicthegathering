@@ -16,6 +16,14 @@
 		6007C7F9260A51D800195155 /* MainTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6007C7F1260A51D800195155 /* MainTabBarView.xib */; };
 		6007C7FA260A51D800195155 /* MainTabBarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7F2260A51D800195155 /* MainTabBarEntity.swift */; };
 		6007C7FB260A51D800195155 /* MainTabBarWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C7F3260A51D800195155 /* MainTabBarWireframe.swift */; };
+		6007C824260A99F200195155 /* NewPlayerFormContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C81C260A99F200195155 /* NewPlayerFormContract.swift */; };
+		6007C825260A99F200195155 /* NewPlayerFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C81D260A99F200195155 /* NewPlayerFormPresenter.swift */; };
+		6007C826260A99F200195155 /* NewPlayerFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C81E260A99F200195155 /* NewPlayerFormBuilder.swift */; };
+		6007C827260A99F200195155 /* NewPlayerFormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C81F260A99F200195155 /* NewPlayerFormInteractor.swift */; };
+		6007C828260A99F200195155 /* NewPlayerFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C820260A99F200195155 /* NewPlayerFormView.swift */; };
+		6007C829260A99F200195155 /* NewPlayerFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6007C821260A99F200195155 /* NewPlayerFormView.xib */; };
+		6007C82A260A99F200195155 /* NewPlayerFormEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C822260A99F200195155 /* NewPlayerFormEntity.swift */; };
+		6007C82B260A99F200195155 /* NewPlayerFormWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007C823260A99F200195155 /* NewPlayerFormWireframe.swift */; };
 		6020682B26090008001B0E02 /* CardDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020682326090008001B0E02 /* CardDetailContract.swift */; };
 		6020682C26090008001B0E02 /* CardDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020682426090008001B0E02 /* CardDetailPresenter.swift */; };
 		6020682D26090008001B0E02 /* CardDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020682526090008001B0E02 /* CardDetailBuilder.swift */; };
@@ -83,6 +91,14 @@
 		6007C7F1260A51D800195155 /* MainTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarView.xib; sourceTree = "<group>"; };
 		6007C7F2260A51D800195155 /* MainTabBarEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarEntity.swift; sourceTree = "<group>"; };
 		6007C7F3260A51D800195155 /* MainTabBarWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarWireframe.swift; sourceTree = "<group>"; };
+		6007C81C260A99F200195155 /* NewPlayerFormContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerFormContract.swift; sourceTree = "<group>"; };
+		6007C81D260A99F200195155 /* NewPlayerFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerFormPresenter.swift; sourceTree = "<group>"; };
+		6007C81E260A99F200195155 /* NewPlayerFormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerFormBuilder.swift; sourceTree = "<group>"; };
+		6007C81F260A99F200195155 /* NewPlayerFormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerFormInteractor.swift; sourceTree = "<group>"; };
+		6007C820260A99F200195155 /* NewPlayerFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerFormView.swift; sourceTree = "<group>"; };
+		6007C821260A99F200195155 /* NewPlayerFormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPlayerFormView.xib; sourceTree = "<group>"; };
+		6007C822260A99F200195155 /* NewPlayerFormEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerFormEntity.swift; sourceTree = "<group>"; };
+		6007C823260A99F200195155 /* NewPlayerFormWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerFormWireframe.swift; sourceTree = "<group>"; };
 		6020682326090008001B0E02 /* CardDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailContract.swift; sourceTree = "<group>"; };
 		6020682426090008001B0E02 /* CardDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailPresenter.swift; sourceTree = "<group>"; };
 		6020682526090008001B0E02 /* CardDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailBuilder.swift; sourceTree = "<group>"; };
@@ -171,6 +187,29 @@
 			isa = PBXGroup;
 			children = (
 				6007C7F1260A51D800195155 /* MainTabBarView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6007C81B260A99D900195155 /* NewPlayerForm */ = {
+			isa = PBXGroup;
+			children = (
+				6007C81E260A99F200195155 /* NewPlayerFormBuilder.swift */,
+				6007C81C260A99F200195155 /* NewPlayerFormContract.swift */,
+				6007C822260A99F200195155 /* NewPlayerFormEntity.swift */,
+				6007C81F260A99F200195155 /* NewPlayerFormInteractor.swift */,
+				6007C81D260A99F200195155 /* NewPlayerFormPresenter.swift */,
+				6007C820260A99F200195155 /* NewPlayerFormView.swift */,
+				6007C823260A99F200195155 /* NewPlayerFormWireframe.swift */,
+				6007C830260A99F800195155 /* UI */,
+			);
+			path = NewPlayerForm;
+			sourceTree = "<group>";
+		};
+		6007C830260A99F800195155 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6007C821260A99F200195155 /* NewPlayerFormView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -281,6 +320,7 @@
 		60DC59292607CE6200CBA12A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6007C81B260A99D900195155 /* NewPlayerForm */,
 				60DC59402607CFCD00CBA12A /* BASE */,
 				602068222608FFEA001B0E02 /* CardDetail */,
 				60DC592A2607CECF00CBA12A /* CardsList */,
@@ -478,6 +518,7 @@
 				60A008FB25FD5EAF00A2941E /* LaunchScreen.storyboard in Resources */,
 				60EB9D552609303700346991 /* Magicmedieval-pRV1.ttf in Resources */,
 				6007C7F9260A51D800195155 /* MainTabBarView.xib in Resources */,
+				6007C829260A99F200195155 /* NewPlayerFormView.xib in Resources */,
 				6020683026090008001B0E02 /* CardDetailView.xib in Resources */,
 				60A008F825FD5EAF00A2941E /* Assets.xcassets in Resources */,
 				60DC59382607CF2600CBA12A /* CardsListView.xib in Resources */,
@@ -582,6 +623,7 @@
 			files = (
 				60DC59342607CF2600CBA12A /* CardsListPresenter.swift in Sources */,
 				6007C7F8260A51D800195155 /* MainTabBarView.swift in Sources */,
+				6007C824260A99F200195155 /* NewPlayerFormContract.swift in Sources */,
 				60DC59602607D06000CBA12A /* BaseEntity.swift in Sources */,
 				60DC59582607D05500CBA12A /* BasePresenter.swift in Sources */,
 				6020682F26090008001B0E02 /* CardDetailView.swift in Sources */,
@@ -593,16 +635,20 @@
 				60DC59352607CF2600CBA12A /* CardsListBuilder.swift in Sources */,
 				60DC59692607D44D00CBA12A /* UIViewControllerExtension.swift in Sources */,
 				6007C7F6260A51D800195155 /* MainTabBarBuilder.swift in Sources */,
+				6007C82A260A99F200195155 /* NewPlayerFormEntity.swift in Sources */,
 				6020682D26090008001B0E02 /* CardDetailBuilder.swift in Sources */,
+				6007C826260A99F200195155 /* NewPlayerFormBuilder.swift in Sources */,
 				60DC597A2607EF4100CBA12A /* CardsListCollectionViewCell.swift in Sources */,
 				60DC59622607D06000CBA12A /* BaseViewController.swift in Sources */,
 				6020683226090008001B0E02 /* CardDetailWireframe.swift in Sources */,
 				60DC59362607CF2600CBA12A /* CardsListInteractor.swift in Sources */,
+				6007C82B260A99F200195155 /* NewPlayerFormWireframe.swift in Sources */,
 				60E6EFDC260003C900C884A8 /* Environment.swift in Sources */,
 				6020682C26090008001B0E02 /* CardDetailPresenter.swift in Sources */,
 				6020682B26090008001B0E02 /* CardDetailContract.swift in Sources */,
 				6007C7FA260A51D800195155 /* MainTabBarEntity.swift in Sources */,
 				60DC593A2607CF2600CBA12A /* CardsListWireframe.swift in Sources */,
+				6007C825260A99F200195155 /* NewPlayerFormPresenter.swift in Sources */,
 				60238D6D2602B65000877DD2 /* Card.swift in Sources */,
 				605D83B62603CA84007CC436 /* BaseNetworkProvider.swift in Sources */,
 				605D83AC2603C71C007CC436 /* MagicNetworkProvider.swift in Sources */,
@@ -610,11 +656,13 @@
 				60A008EF25FD5EAE00A2941E /* AppDelegate.swift in Sources */,
 				60DC59372607CF2600CBA12A /* CardsListView.swift in Sources */,
 				6007C7F5260A51D800195155 /* MainTabBarPresenter.swift in Sources */,
+				6007C828260A99F200195155 /* NewPlayerFormView.swift in Sources */,
 				60A008F125FD5EAE00A2941E /* SceneDelegate.swift in Sources */,
 				60DC59612607D06000CBA12A /* BaseWireframe.swift in Sources */,
 				6007C7F7260A51D800195155 /* MainTabBarInteractor.swift in Sources */,
 				60DC59392607CF2600CBA12A /* CardsListEntity.swift in Sources */,
 				60DC595F2607D06000CBA12A /* BaseInteractor.swift in Sources */,
+				6007C827260A99F200195155 /* NewPlayerFormInteractor.swift in Sources */,
 				60DC59332607CF2600CBA12A /* CardsListContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
