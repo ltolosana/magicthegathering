@@ -15,6 +15,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewPlayerFormView" customModule="MagicTheGathering" customModuleProvider="target">
             <connections>
+                <outlet property="aliasTextField" destination="WJ8-jv-7Es" id="UCo-7D-hy0"/>
+                <outlet property="emailTextField" destination="0Xx-55-QRL" id="gbd-De-6dk"/>
+                <outlet property="nameTextField" destination="c84-29-tvo" id="cue-l1-Xy9"/>
+                <outlet property="passwordTxtField" destination="vdY-bP-BKc" id="6jI-dB-9yI"/>
+                <outlet property="phoneTextField" destination="1ts-LU-MKV" id="906-S9-oVZ"/>
+                <outlet property="planeskalkerTextField" destination="e8h-EQ-SW0" id="UPX-Yh-dsD"/>
+                <outlet property="registerButton" destination="3O0-Ia-ebz" id="pYP-Rv-FxO"/>
+                <outlet property="repeatEmailTextField" destination="W5b-wC-P7O" id="CgS-RJ-vXL"/>
+                <outlet property="repeatPasswordTextField" destination="lFO-Lr-YDV" id="0Wd-7D-MK8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -173,6 +182,9 @@
                             <state key="normal" title="Register">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="registerButtonAction:" destination="-1" eventType="touchUpInside" id="of2-dc-sSj"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
