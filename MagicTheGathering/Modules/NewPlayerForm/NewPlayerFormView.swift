@@ -65,6 +65,8 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
         passwordTxtField.delegate = textFieldsDelegate
         repeatPasswordTextField.tag = 7
         repeatPasswordTextField.delegate = textFieldsDelegate
+        
+        setupTextFieldsFont()
         scrollView.keyboardDismissMode = .onDrag
     }
     
@@ -103,4 +105,16 @@ extension NewPlayerFormView {
     private func keyboardWillHide(notification: Notification) {
         scrollView.contentInset = UIEdgeInsets.zero
      }
+    
+    private func setupTextFieldsFont() {
+        if let magicFont = UIFont(name: Constants.magicFont, size: 14) {
+            nameTextField.font = magicFont
+            aliasTextField.font = magicFont
+            planeskalkerTextField.font = magicFont
+            emailTextField.font = magicFont
+            repeatEmailTextField.font = magicFont
+            passwordTxtField.font = magicFont
+            repeatPasswordTextField.font = magicFont
+        }
+    }
 }
