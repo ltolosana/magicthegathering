@@ -36,6 +36,7 @@
 		605D83AC2603C71C007CC436 /* MagicNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83AB2603C71C007CC436 /* MagicNetworkProvider.swift */; };
 		605D83B22603CA10007CC436 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83B12603CA10007CC436 /* NetworkConstants.swift */; };
 		605D83B62603CA84007CC436 /* BaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83B52603CA84007CC436 /* BaseNetworkProvider.swift */; };
+		6086E241260BD00B00B20300 /* NewPlayerFormViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6086E240260BD00B00B20300 /* NewPlayerFormViewDelegate.swift */; };
 		60A008EF25FD5EAE00A2941E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A008EE25FD5EAE00A2941E /* AppDelegate.swift */; };
 		60A008F125FD5EAE00A2941E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A008F025FD5EAE00A2941E /* SceneDelegate.swift */; };
 		60A008F825FD5EAF00A2941E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A008F725FD5EAF00A2941E /* Assets.xcassets */; };
@@ -111,6 +112,7 @@
 		605D83AB2603C71C007CC436 /* MagicNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicNetworkProvider.swift; sourceTree = "<group>"; };
 		605D83B12603CA10007CC436 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		605D83B52603CA84007CC436 /* BaseNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkProvider.swift; sourceTree = "<group>"; };
+		6086E240260BD00B00B20300 /* NewPlayerFormViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerFormViewDelegate.swift; sourceTree = "<group>"; };
 		60A008EB25FD5EAE00A2941E /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A008EE25FD5EAE00A2941E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60A008F025FD5EAE00A2941E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				6007C81F260A99F200195155 /* NewPlayerFormInteractor.swift */,
 				6007C81D260A99F200195155 /* NewPlayerFormPresenter.swift */,
 				6007C820260A99F200195155 /* NewPlayerFormView.swift */,
+				6086E240260BD00B00B20300 /* NewPlayerFormViewDelegate.swift */,
 				6007C823260A99F200195155 /* NewPlayerFormWireframe.swift */,
 				6007C830260A99F800195155 /* UI */,
 			);
@@ -628,6 +631,7 @@
 				60DC59582607D05500CBA12A /* BasePresenter.swift in Sources */,
 				6020682F26090008001B0E02 /* CardDetailView.swift in Sources */,
 				6007C7F4260A51D800195155 /* MainTabBarContract.swift in Sources */,
+				6086E241260BD00B00B20300 /* NewPlayerFormViewDelegate.swift in Sources */,
 				605D83B22603CA10007CC436 /* NetworkConstants.swift in Sources */,
 				6007C7FB260A51D800195155 /* MainTabBarWireframe.swift in Sources */,
 				6007C7BC260A1F1B00195155 /* Constants.swift in Sources */,
