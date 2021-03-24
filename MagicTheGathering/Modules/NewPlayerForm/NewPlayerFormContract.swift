@@ -18,6 +18,8 @@ protocol NewPlayerFormEntityContract: BaseEntity {
 protocol NewPlayerFormViewContract: BaseViewController {
     var presenter: NewPlayerFormPresenterContract! { get set }
     
+    func addObservers()
+    func removeObservers()
 }
 
 protocol NewPlayerFormPresenterContract: BasePresenter {
@@ -28,6 +30,7 @@ protocol NewPlayerFormPresenterContract: BasePresenter {
 
     func viewDidLoad()
     func viewWillAppear()
+    func viewWillDisappear()
 }
 
 protocol NewPlayerFormInteractorContract: BaseInteractor {

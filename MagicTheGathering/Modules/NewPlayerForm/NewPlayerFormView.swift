@@ -20,6 +20,8 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var registerButton: UIButton!
     
     var presenter: NewPlayerFormPresenterContract!
@@ -32,13 +34,20 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
         super.viewDidLoad()
         self.setupView()
         self.presenter.viewDidLoad()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.presenter.viewWillAppear()
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.presenter.viewWillDisappear()
+        
+    }
+    
     private func setupView() {
         nameTextField.tag = 0
         nameTextField.delegate = textFieldsDelegate
@@ -56,15 +65,50 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
         passwordTxtField.delegate = textFieldsDelegate
         repeatPasswordTextField.tag = 7
         repeatPasswordTextField.delegate = textFieldsDelegate
-
+        scrollView.keyboardDismissMode = .onDrag
     }
     
     @IBAction func registerButtonAction(_ sender: Any) {
     }
 }
 
+// MARK: - Extension
+extension NewPlayerFormView {
+
+    func addObservers() {
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification,
+                                               object: nil, queue: nil) { notification in
+                self.keyboardWillShow(notification: notification)
+            }
+
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification,
+                                               object: nil, queue: nil) { notification in
+                self.keyboardWillHide(notification: notification)
+            }
+    }
+
+    func removeObservers() {
+            NotificationCenter.default.removeObserver(self)
+        }
+    
+    private func keyboardWillShow(notification: Notification) {
+            guard let userInfo = notification.userInfo,
+                  let frame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+                    return
+            }
+            let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: 0)
+            scrollView.contentInset = contentInset
+    }
+
+    private func keyboardWillHide(notification: Notification) {
+        scrollView.contentInset = UIEdgeInsets.zero
+
+     }
+}
+
+// MARK: - UITextFieldDelegate
 // En este caso en vez de hacer como suelo hacer yo habitualmente, de usar una extension y que el delegado sea self,
-// voy a ahcer como has hecho tu y crear una nueva clase que se conforma con el protocolo de UITextFieldDelegate
+// voy a hacer como has hecho tu y crear una nueva clase que se conforma con el protocolo de UITextFieldDelegate
 
 class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
     
@@ -77,7 +121,5 @@ class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
         }
 
         return true
-    
     }
-    
 }

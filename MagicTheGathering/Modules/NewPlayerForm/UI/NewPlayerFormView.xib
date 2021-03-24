@@ -24,6 +24,7 @@
                 <outlet property="registerButton" destination="3O0-Ia-ebz" id="pYP-Rv-FxO"/>
                 <outlet property="repeatEmailTextField" destination="W5b-wC-P7O" id="CgS-RJ-vXL"/>
                 <outlet property="repeatPasswordTextField" destination="lFO-Lr-YDV" id="0Wd-7D-MK8"/>
+                <outlet property="scrollView" destination="NVp-es-MEp" id="RSz-hE-m3U"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

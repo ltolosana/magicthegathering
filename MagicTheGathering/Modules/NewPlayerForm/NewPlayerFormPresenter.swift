@@ -18,10 +18,15 @@ class NewPlayerFormPresenter: BasePresenter, NewPlayerFormPresenterContract {
 
     func viewDidLoad() {
         view.setUpNavigationTitle(title: "New Player Registration")
+        view.addObservers()
     }
 
     func viewWillAppear() {
 
+    }
+    
+    func viewWillDisappear() {
+        view.removeObservers()
     }
 }
 
