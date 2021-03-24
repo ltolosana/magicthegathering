@@ -13,6 +13,7 @@ class NewPlayerFormBuilder {
 
     static func build() -> NewPlayerFormView {
         let view = NewPlayerFormView.init(nibName: String(describing: NewPlayerFormView.self), bundle: nil)
+        view.tabBarItem = UITabBarItem(title: "New Player", image: UIImage(systemName: "person"), tag: 1)
         let presenter = NewPlayerFormPresenter()
         let entity = NewPlayerFormEntity()
         let wireframe = NewPlayerFormWireframe()

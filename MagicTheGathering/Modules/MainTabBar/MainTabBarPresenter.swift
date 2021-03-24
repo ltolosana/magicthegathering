@@ -29,7 +29,8 @@ class MainTabBarPresenter: BasePresenter, MainTabBarPresenterContract {
         let cardsNavigationVC = UINavigationController(rootViewController: cardsListVC)
         cardsNavigationVC.setUpTabBarItemFont(fontSize: 24, color: UIColor.red)
 
-        return [cardsNavigationVC]
+        let newPlayerVC = NewPlayerFormBuilder.build()
+        return [cardsNavigationVC, newPlayerVC]
     }
 }
 
