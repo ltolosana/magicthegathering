@@ -50,20 +50,32 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
     
     private func setupView() {
         nameTextField.tag = 0
+        nameTextField.clearButtonMode = .always
         nameTextField.delegate = textFieldsDelegate
         aliasTextField.tag = 1
+        aliasTextField.clearButtonMode = .always
         aliasTextField.delegate = textFieldsDelegate
         planeskalkerTextField.tag = 2
+        planeskalkerTextField.clearButtonMode = .always
         planeskalkerTextField.delegate = textFieldsDelegate
         phoneTextField.tag = 3
+        phoneTextField.clearButtonMode = .always
         phoneTextField.delegate = textFieldsDelegate
         emailTextField.tag = 4
+        emailTextField.clearButtonMode = .always
         emailTextField.delegate = textFieldsDelegate
         repeatEmailTextField.tag = 5
+        repeatEmailTextField.clearButtonMode = .always
         repeatEmailTextField.delegate = textFieldsDelegate
         passwordTxtField.tag = 6
+        passwordTxtField.clearButtonMode = .always
+        passwordTxtField.clearsOnBeginEditing = true
+        passwordTxtField.clearsOnInsertion = true
         passwordTxtField.delegate = textFieldsDelegate
         repeatPasswordTextField.tag = 7
+        repeatPasswordTextField.clearButtonMode = .always
+        repeatPasswordTextField.clearsOnBeginEditing = true
+        repeatPasswordTextField.clearsOnInsertion = true
         repeatPasswordTextField.delegate = textFieldsDelegate
         
         setupTextFieldsFont()

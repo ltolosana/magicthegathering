@@ -61,33 +61,32 @@ extension NewPlayerFormViewDelegate {
         
         // Si ambos campos son iguales limpamos el fondo y salimos
         if textField.text == otherTextField.text {
-            textField.rightViewMode = .never
+            textField.leftViewMode = .never
             textField.backgroundColor = originalBackgroundColor
-            otherTextField.rightViewMode = .never
+            otherTextField.leftViewMode = .never
             otherTextField.backgroundColor = originalBackgroundColor
-            return true
         } else {
             // Si no son iguales ...
             switch otherField {
             case .email, .password:
-                // ... y estamos en uno de los campos de repeticion, nos ponemos en rojo y no dejamos salir
+                // ... y estamos en uno de los campos de repeticion, nos ponemos en rojo y dejamos salir
+                // porque puede que el error este en el otro campo y asi el usuario podra arreglarlo
                 // Para que solo cree el overlayButton la primera vez
-                textField.rightView = textField.rightView ?? createOverlayButton()
-                textField.rightViewMode = .always
+                textField.leftView = textField.leftView ?? createOverlayButton()
+                textField.leftViewMode = .always
                 textField.backgroundColor = errorBackgroundColor
-                return false
             case .repeatEmail, .repeatPassword:
                 // ... y estamos en uno de los campos principales, ponemos el de repeticion en rojo y salimos
                 // Salvo que el campo de repeticion este vacio, en cuyo caso le damos al usuario la oportunidad de rellenarlo
                 if otherTextField.text != "" {
                     // Para que solo cree el overlayButton la primera vez
-                    otherTextField.rightView = otherTextField.rightView ?? createOverlayButton()
-                    otherTextField.rightViewMode = .always
+                    otherTextField.leftView = otherTextField.leftView ?? createOverlayButton()
+                    otherTextField.leftViewMode = .always
                     otherTextField.backgroundColor = errorBackgroundColor
                 }
-                return true
             }
         }
+        return true
     }
     
     private func createOverlayButton() -> UIButton {
