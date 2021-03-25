@@ -17,7 +17,7 @@ class NewPlayerFormPresenter: BasePresenter, NewPlayerFormPresenterContract {
     var wireframe: NewPlayerFormWireframeContract!
 
     func viewDidLoad() {
-        view.setUpNavigationTitle(title: "New Player Registration")
+        //view.setUpNavigationTitle(title: "New Player Registration")
         view.addObservers()
     }
 

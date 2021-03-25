@@ -29,7 +29,7 @@ protocol MainTabBarPresenterContract: BasePresenter {
     func viewDidLoad()
     func viewWillAppear()
     
-    func getTabBarViewController() -> [UIViewController]
+    func getTabBarViewController() -> [BaseNavigationController]
 }
 
 protocol MainTabBarInteractorContract: BaseInteractor {
@@ -46,6 +46,8 @@ protocol MainTabBarWireframeContract: BaseWireframe {
     
     func showBasicLoading(text: String)
     func hideBasicLoading(completion: @escaping (() -> Void))
+    
+    func embedInNavigation(_ destination: UIViewController) -> BaseNavigationController
 }
 
 protocol MainTabBarWireframeOutputContract: class {

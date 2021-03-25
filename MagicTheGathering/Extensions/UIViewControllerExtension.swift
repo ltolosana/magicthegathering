@@ -23,9 +23,9 @@ extension UIViewController {
         return nil
     }
     
-    func setUpNavigationTitle(title: String) {
+    func setUpNavigationTitleFont(fontSize: CGFloat, color: UIColor) {
         if let magicFont = UIFont(name: Constants.magicFont, size: 24) {
-            let attributes = [NSAttributedString.Key.font: magicFont]
+            let attributes = [NSAttributedString.Key.font: magicFont, NSAttributedString.Key.foregroundColor: color]
             self.navigationController?.navigationBar.titleTextAttributes = attributes
   
         // El siguiente codigo es para cambiar, ademas del title, el boton de atras
@@ -45,11 +45,9 @@ extension UIViewController {
             self.navigationController?.navigationBar.standardAppearance = navBarAppearance
  */
         }
-        
-        self.title = title
     }
     
-    func setUpTabBarItemFont(fontSize: CGFloat, color: UIColor ) {
+    func setUpTabBarItemFont(fontSize: CGFloat, color: UIColor) {
         if let magicFont = UIFont(name: Constants.magicFont, size: fontSize) {
             let attributes = [NSAttributedString.Key.font: magicFont, NSAttributedString.Key.foregroundColor: color]
             self.tabBarItem?.setTitleTextAttributes(attributes, for: .normal)

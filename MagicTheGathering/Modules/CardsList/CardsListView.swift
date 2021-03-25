@@ -34,6 +34,17 @@ class CardsListView: BaseViewController, CardsListViewContract {
         self.cards = cards
         collectionView.reloadData()
     }
+    
+    func setUpNavigationTitle(title: String) {
+        self.title = title
+        setUpNavigationTitleFont(fontSize: 24, color: .systemRed)
+    }
+    
+    func setUpTabBar(title: String) {
+        let icon = UIImage(systemName: "flame")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal)
+        tabBarItem = UITabBarItem(title: title, image: icon, tag: 0)
+        setUpTabBarItemFont(fontSize: 16, color: .systemRed)
+    }
        
     // MARK: - Private methods
     private func setupView() {
