@@ -22,7 +22,6 @@ class CardsListPresenter: BasePresenter, CardsListPresenterContract {
     func viewDidLoad() {
         
         view.setUpNavigationTitle(title: "Magic Cards List")
-        view.setUpTabBar(title: "Cards List")
         
         firstly {
             interactor.getCardsList()

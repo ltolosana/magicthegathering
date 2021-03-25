@@ -13,6 +13,8 @@ class CardsListBuilder {
 
     static func build() -> CardsListView {
         let view = CardsListView.init(nibName: String(describing: CardsListView.self), bundle: nil)
+        view.setUpTabBar(title: "Cards List")
+        
         let presenter = CardsListPresenter()
         let entity = CardsListEntity()
         let wireframe = CardsListWireframe()

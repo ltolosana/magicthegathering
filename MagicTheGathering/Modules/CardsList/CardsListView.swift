@@ -37,12 +37,14 @@ class CardsListView: BaseViewController, CardsListViewContract {
     
     func setUpNavigationTitle(title: String) {
         self.title = title
-        setUpNavigationTitleFont(fontSize: 24, color: .systemRed)
+        setUpNavigationTitleFont(fontSize: 24, color: .label)
     }
     
     func setUpTabBar(title: String) {
-        let icon = UIImage(systemName: "flame")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal)
+        let icon = UIImage(systemName: "flame")
         tabBarItem = UITabBarItem(title: title, image: icon, tag: 0)
+        
+        tabBarItem.selectedImage = icon?.withTintColor(.systemRed, renderingMode: .alwaysOriginal)
         setUpTabBarItemFont(fontSize: 16, color: .systemRed)
     }
        
