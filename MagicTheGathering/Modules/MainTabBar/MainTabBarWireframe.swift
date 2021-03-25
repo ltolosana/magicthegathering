@@ -24,4 +24,9 @@ class MainTabBarWireframe: BaseWireframe, MainTabBarWireframeContract {
     func hideBasicLoading(completion: @escaping (() -> Void)) {
     }
     
+    func embedInNavigation(_ destination: UIViewController) -> BaseNavigationController {
+        let navigationController = BaseNavigationController.init(rootViewController: destination)
+
+        return navigationController
+    }
 }

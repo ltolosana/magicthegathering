@@ -11,6 +11,10 @@ class BaseViewController: UIViewController {
 
 }
 
+class BaseNavigationController: UINavigationController {
+
+}
+
 class BaseTabBarController: UITabBarController {
     
 }
