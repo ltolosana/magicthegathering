@@ -54,8 +54,9 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
     }
     
     func setUpTabBar(title: String) {
-        let icon = UIImage(systemName: "person")?.withTintColor(.systemBlue, renderingMode: .automatic)
+        let icon = UIImage(systemName: "person")
         tabBarItem = UITabBarItem(title: title, image: icon, tag: 1)
+        tabBarItem.selectedImage = icon?.withTintColor(.systemBlue, renderingMode: .alwaysOriginal)
         setUpTabBarItemFont(fontSize: 16, color: .systemBlue)
     }
     
