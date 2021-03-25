@@ -18,6 +18,9 @@ protocol NewPlayerFormEntityContract: BaseEntity {
 protocol NewPlayerFormViewContract: BaseViewController {
     var presenter: NewPlayerFormPresenterContract! { get set }
     
+    func setUpNavigationTitle(title: String)
+    func setUpTabBar(title: String)
+    
     func addObservers()
     func removeObservers()
 }

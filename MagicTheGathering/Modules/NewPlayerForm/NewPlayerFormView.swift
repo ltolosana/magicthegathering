@@ -48,6 +48,17 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
         
     }
     
+    func setUpNavigationTitle(title: String) {
+        self.navigationItem.title = title
+        setUpNavigationTitleFont(fontSize: 24, color: .label)
+    }
+    
+    func setUpTabBar(title: String) {
+        let icon = UIImage(systemName: "person")?.withTintColor(.systemBlue, renderingMode: .automatic)
+        tabBarItem = UITabBarItem(title: title, image: icon, tag: 1)
+        setUpTabBarItemFont(fontSize: 16, color: .systemBlue)
+    }
+    
     private func setupView() {
         nameTextField.tag = 0
         nameTextField.clearButtonMode = .always
