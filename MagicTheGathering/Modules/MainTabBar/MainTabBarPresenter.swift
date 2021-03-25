@@ -27,9 +27,13 @@ class MainTabBarPresenter: BasePresenter, MainTabBarPresenterContract {
     func getTabBarViewController() -> [UIViewController] {
         let cardsListVC = CardsListBuilder.build()
         let cardsNavigationVC = UINavigationController(rootViewController: cardsListVC)
-        cardsNavigationVC.setUpTabBarItemFont(fontSize: 24, color: UIColor.red)
+        cardsNavigationVC.setUpTabBarItemFont(fontSize: 16, color: UIColor.systemRed)
 
-        return [cardsNavigationVC]
+        let newPlayerVC = NewPlayerFormBuilder.build()
+        let newPlayerNavigationVC = UINavigationController(rootViewController: newPlayerVC)
+        newPlayerNavigationVC.setUpTabBarItemFont(fontSize: 16, color: UIColor.systemBlue)
+        
+        return [cardsNavigationVC, newPlayerNavigationVC]
     }
 }
 
