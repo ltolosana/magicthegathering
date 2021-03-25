@@ -70,7 +70,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xabbey" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="WJ8-jv-7Es">
                                                     <rect key="frame" x="0.0" y="22.333333333333314" width="358" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="nickname"/>
                                                 </textField>
                                             </subviews>
                                         </stackView>

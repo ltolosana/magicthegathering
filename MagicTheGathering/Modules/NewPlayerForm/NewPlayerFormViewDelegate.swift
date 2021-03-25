@@ -46,6 +46,16 @@ class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
             return true
         }
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        switch textField.tag {
+
+        case 3:
+            return checkPhoneNumber(textField, shouldChangeCharactersIn: range, replacementString: string)
+        default:
+            return true
+        }
+    }
 }
 
 // MARK: - Extension NewPlayerFormViewDelegate
@@ -98,4 +108,52 @@ extension NewPlayerFormViewDelegate {
         return overlayButton
     }
 
+    private func checkPhoneNumber(_ textField: UITextField,
+                                  shouldChangeCharactersIn range: NSRange,
+                                  replacementString string: String) -> Bool {
+        // Voy a hacer una comprobacion de prueba como si fuera para telefonos de España
+        // El requisito es que empieze por un signo "+"y despues tiene exactamente 11 digitos, incluido el prefijo
+        // No voy a comprobar que el prefijo sea +34, sino que se puede poner cualquier numero
+        // Tambien se que hay un pequeño "bug"y es que si alguien hace un paste de un numero y el total tiene mas de 11 digitos,
+        // eso no lo compruebo, y queda un numero de telefono demasiado grande.
+        // Y tampoco se como formatear el numero para que aparezca como en el placeholder "+34 555 55 55 55"
+        // (con los espaios en blanco)
+        
+        if range.location == 0 {
+            // Es el primer elemento que se teclea
+            if string == "+" {
+                // En caso de que se teclee el "+" dejamos continuar
+                debugPrint("Primer elemento correcto")
+                return true
+            } else {
+                // Si no es el signo "+" no deja escribir, ni aunque se este hacendo un paste
+                debugPrint("Primer elemento no valido")
+                return false
+            }
+        } else {
+            // Comprobamos el resto de elementos (menos el primero)
+            if Int(string) == nil {
+                // Si tecleamos algo que no es un numero
+                if range.upperBound > range.lowerBound {
+                    // Estamos borrando asi que esto si seria valido
+                    debugPrint("Estamos borrando")
+                    return true
+                } else {
+                    // Estamos tecleando algo que no es un numero y eso no es valido
+                    debugPrint("No estas tecleando un numero")
+                    return false
+                }
+            } else {
+                // Si que es un numero asi que todo correcto
+                if range.location == 12 {
+                    // Hemos tecleado los 11 digitos del numero completo, ademas del "+" asi que no dejamos teclear mas
+                    debugPrint("Hemos llegado al ultimo digito")
+                    return false
+                } else {
+                    // Estamos tecleando numeros asi que dejamos continuar
+                    return true
+                }
+            }
+        }
+    }
 }
