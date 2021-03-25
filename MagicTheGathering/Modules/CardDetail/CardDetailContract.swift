@@ -18,6 +18,7 @@ protocol CardDetailEntityContract: BaseEntity {
 protocol CardDetailViewContract: BaseViewController {
     var presenter: CardDetailPresenterContract! { get set }
     
+    func setUpNavigationTitle(title: String)
     func reloadViewWithData(card: Card)
 }
 

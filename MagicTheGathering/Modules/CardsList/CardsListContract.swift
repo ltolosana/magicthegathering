@@ -19,6 +19,8 @@ protocol CardsListViewContract: BaseViewController {
     var presenter: CardsListPresenterContract! { get set }
     
     func updateCardsData(cards: [Card])
+    func setUpNavigationTitle(title: String)
+    func setUpTabBar(title: String)
 }
 
 protocol CardsListPresenterContract: BasePresenter {

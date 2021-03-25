@@ -45,6 +45,11 @@ class CardDetailView: BaseViewController, CardDetailViewContract {
         configureStackViews()
     }
     
+    func setUpNavigationTitle(title: String) {
+        self.title = title
+        setUpNavigationTitleFont(fontSize: 24, color: .systemRed)
+    }
+    
     func reloadViewWithData(card: Card) {
         if let url = URL(string: card.getImageURL()) {
             cardImageView.sd_setImage(with: url, completed: nil)
