@@ -11,7 +11,9 @@ import UIKit
 
 class PhotoPlayerView: BaseViewController, PhotoPlayerViewContract {
 
-	var presenter: PhotoPlayerPresenterContract!
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    var presenter: PhotoPlayerPresenterContract!
 
 	// MARK: - LifeCycle
     override func viewDidLoad() {
@@ -41,4 +43,8 @@ class PhotoPlayerView: BaseViewController, PhotoPlayerViewContract {
 
     }
     
+    @IBAction func tapAction(_ sender: Any) {
+        print("ACTION")
+    }
+
 }
