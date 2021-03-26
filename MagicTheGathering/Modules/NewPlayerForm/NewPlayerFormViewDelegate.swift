@@ -26,14 +26,20 @@ class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
         } else {
             textField.resignFirstResponder()
         }
-
+        
         return true
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-         
+        
         switch textField.tag {
-
+        
+        case 0:
+            return checkTextFieldNumWords(textField, minWords: 2)
+        case 1:
+            return checkTextFieldNumWords(textField, minWords: 1)
+        case 2:
+            return checkTextFieldNumWords(textField, minWords: 1)
         case 4:
             return checkSameTextInput(textField, vs: .repeatEmail)
         case 5:
@@ -53,7 +59,7 @@ class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField.tag {
-
+        
         case 3:
             return checkPhoneNumber(textField, shouldChangeCharactersIn: range, replacementString: string)
         default:
@@ -64,6 +70,21 @@ class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
 
 // MARK: - Extension NewPlayerFormViewDelegate
 extension NewPlayerFormViewDelegate {
+    
+    // Hago una comprobacion muy basica y por ejemplo no compruebo que haya espacios en blanco al principio ni nada mas avanzado
+    private func checkTextFieldNumWords(_ textField: UITextField, minWords: Int) -> Bool {
+        guard let words = textField.text?.split(separator: " ") else {
+            setTextFieldError(textField)
+            return false
+        }
+        if words.count >= minWords {
+            clearTextFieldError(textField)
+            return true
+        } else {
+            setTextFieldError(textField)
+            return false
+        }
+    }
     
     private func checkSameTextInput(_ textField: UITextField, vs otherField: TextFieldType) -> Bool {
         
