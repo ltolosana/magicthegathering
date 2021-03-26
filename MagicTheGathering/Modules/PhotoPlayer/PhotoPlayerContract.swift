@@ -30,10 +30,14 @@ protocol PhotoPlayerPresenterContract: BasePresenter {
 
     func viewDidLoad()
     func viewWillAppear()
+    
+    func tappedForPhoto()
 }
 
 protocol PhotoPlayerInteractorContract: BaseInteractor {
     var output: PhotoPlayerInteractorOutputContract! {get set}
+    
+    func accessPhotoLibrary() -> Promise<Bool>
 }
 
 protocol PhotoPlayerInteractorOutputContract: class {

@@ -20,7 +20,7 @@ class PhotoPlayerBuilder {
         let wireframe = PhotoPlayerWireframe()
         
         let provider = PhotoPlayerProvider()
-        let interactor = PhotoPlayerInteractor(provider: provider)
+        let interactor = PhotoPlayerInteractor(photoProvider: provider)
         
         view.presenter = presenter
         view.presenter.view = view

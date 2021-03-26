@@ -43,8 +43,9 @@ class PhotoPlayerView: BaseViewController, PhotoPlayerViewContract {
 
     }
     
+    // MARK: - Actions
     @IBAction func tapAction(_ sender: Any) {
-        print("ACTION")
+        presenter.tappedForPhoto()
     }
 
 }
