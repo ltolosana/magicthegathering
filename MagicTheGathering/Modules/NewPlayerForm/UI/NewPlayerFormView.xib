@@ -206,8 +206,8 @@
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
                 <constraint firstItem="tAt-aP-EcC" firstAttribute="bottom" secondItem="NVp-es-MEp" secondAttribute="bottom" constant="16" id="9tL-dR-pc8"/>
-                <constraint firstAttribute="trailing" secondItem="NVp-es-MEp" secondAttribute="trailing" constant="16" id="UtO-u5-dzc"/>
-                <constraint firstItem="NVp-es-MEp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="sbx-Jt-qs8"/>
+                <constraint firstItem="tAt-aP-EcC" firstAttribute="trailing" secondItem="NVp-es-MEp" secondAttribute="trailing" constant="16" id="UtO-u5-dzc"/>
+                <constraint firstItem="NVp-es-MEp" firstAttribute="leading" secondItem="tAt-aP-EcC" secondAttribute="leading" constant="16" id="sbx-Jt-qs8"/>
                 <constraint firstItem="NVp-es-MEp" firstAttribute="top" secondItem="tAt-aP-EcC" secondAttribute="top" constant="16" id="tO7-bv-bM5"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
