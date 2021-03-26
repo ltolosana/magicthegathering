@@ -83,11 +83,15 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
         passwordTxtField.clearButtonMode = .always
         passwordTxtField.clearsOnBeginEditing = true
         passwordTxtField.clearsOnInsertion = true
+        passwordTxtField.passwordRules =
+            UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
         passwordTxtField.delegate = textFieldsDelegate
         repeatPasswordTextField.tag = 7
         repeatPasswordTextField.clearButtonMode = .always
         repeatPasswordTextField.clearsOnBeginEditing = true
         repeatPasswordTextField.clearsOnInsertion = true
+        repeatPasswordTextField.passwordRules =
+            UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
         repeatPasswordTextField.delegate = textFieldsDelegate
         
         setupTextFieldsFont()
