@@ -41,7 +41,7 @@ class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
         case 6:
             // Aqui hago una doble comprobacion, la de los requerimientos de la contraseña (cantidad de caracteres,
             // mayuscula y numero) y la de que coincida la contraseña con la del campo de repetirla
-            return checkPasswordField(textField, vs: .repeatPassword)
+            return checkPasswordConstraints(textField) && checkSameTextInput(textField, vs: .repeatPassword)
         case 7:
             // En el simulador no van muy bien las pruebas de esto y para poder probar
             // hay que deshabilitar la opcion de "Secure Text Entry'en el textfield del .xib
@@ -64,13 +64,6 @@ class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
 
 // MARK: - Extension NewPlayerFormViewDelegate
 extension NewPlayerFormViewDelegate {
-    
-    private func checkPasswordField(_ textField: UITextField, vs otherField: TextFieldType) -> Bool {
-        let contraints = checkPasswordConstraints(textField)
-        let sameText = checkSameTextInput(textField, vs: .repeatPassword)
-        
-        return contraints && sameText
-    }
     
     private func checkSameTextInput(_ textField: UITextField, vs otherField: TextFieldType) -> Bool {
         
@@ -149,6 +142,9 @@ extension NewPlayerFormViewDelegate {
         }
     }
     
+    // Aqui solo voy a controlar que tenga un minimo de 8 caracteres, con una mayuscula y un numero
+    // Obviamente habria que controlar tambien que no haya caracteres extraños, tipo espaios en blanco
+    // o caracteres no representables
     private func checkPasswordConstraints(_ textField: UITextField) -> Bool {
         let minCharacters = 8 // Minimo numero de caracteres permitidos en la password
         
