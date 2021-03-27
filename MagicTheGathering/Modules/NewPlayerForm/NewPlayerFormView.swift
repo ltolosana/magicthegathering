@@ -152,6 +152,14 @@ extension NewPlayerFormView {
                     textField.layer.cornerRadius = 5
                     textField.layer.borderWidth = 1
                     textField.layer.borderColor = UIColor.systemGray2.cgColor
+                    
+                    // Esto oculta en el ipad la barra de botones de deshacer y rehacer que aparece encima del teclado
+                    // por lo visto hay un bug en iOS 14 que hace que salgan por consola muchos warnings de constrints
+                    // al aparecer el teclado y aunque parece que esta todo bien, los errores salen.
+                    let item = textField.inputAssistantItem
+                    item.leadingBarButtonGroups = []
+                    item.trailingBarButtonGroups = []
+
                 }
             }
         }
