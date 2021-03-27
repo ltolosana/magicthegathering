@@ -62,10 +62,19 @@ class CardDetailView: BaseViewController, CardDetailViewContract {
     }
     
     func configureStackViews() {
-        if traitCollection.verticalSizeClass == .regular {
-            portraitConfigurationStackViews()
-        } else if traitCollection.verticalSizeClass == .compact {
-            landscapeConfigurationStackViews()
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            if traitCollection.verticalSizeClass == .regular {
+                portraitConfigurationStackViews()
+            } else if traitCollection.verticalSizeClass == .compact {
+                landscapeConfigurationStackViews()
+            }
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            if traitCollection.horizontalSizeClass == .compact {
+                portraitConfigurationStackViews()
+            } else if traitCollection.horizontalSizeClass == .regular {
+                landscapeConfigurationStackViews()
+            }
+            
         }
     }
     
