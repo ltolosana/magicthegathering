@@ -9,6 +9,7 @@
 
 import Foundation
 import UIKit
+import PhotosUI
 
 class PhotoPlayerWireframe: BaseWireframe, PhotoPlayerWireframeContract {
     weak var output: PhotoPlayerWireframeOutputContract!
@@ -26,4 +27,16 @@ class PhotoPlayerWireframe: BaseWireframe, PhotoPlayerWireframeContract {
 
     }
     
+    func showPicker(picker: PHPickerViewController) {
+        presentView(from: view,
+                    useCase: picker,
+                    withTransition: .modal,
+                    modalPresentationStyle: .automatic,
+                    animated: true,
+                    completion: nil)
+    }
+    
+    func hidePicker() {
+        dismissView(from: view, withTransition: .modal, animated: true, completion: nil)
+    }
 }

@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 import PromiseKit
+import PhotosUI
 
 protocol PhotoPlayerEntityContract: BaseEntity {
     
@@ -20,6 +21,9 @@ protocol PhotoPlayerViewContract: BaseViewController {
     
     func setUpNavigationTitle(title: String)
     func setUpTabBar(title: String)
+    
+    func createPicker() -> PHPickerViewController
+    
 }
 
 protocol PhotoPlayerPresenterContract: BasePresenter {
@@ -32,6 +36,9 @@ protocol PhotoPlayerPresenterContract: BasePresenter {
     func viewWillAppear()
     
     func tappedForPhoto()
+    func hidePicker()
+    func showPhotoError()
+    func showPickerNotAuthorized()
 }
 
 protocol PhotoPlayerInteractorContract: BaseInteractor {
@@ -50,6 +57,9 @@ protocol PhotoPlayerWireframeContract: BaseWireframe {
     
     func showBasicLoading(text: String)
     func hideBasicLoading(completion: @escaping (() -> Void))
+    
+    func showPicker(picker: PHPickerViewController)
+    func hidePicker()
 }
 
 protocol PhotoPlayerWireframeOutputContract: class {

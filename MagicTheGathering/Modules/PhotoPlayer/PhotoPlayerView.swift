@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 class PhotoPlayerView: BaseViewController, PhotoPlayerViewContract {
 
@@ -47,5 +48,38 @@ class PhotoPlayerView: BaseViewController, PhotoPlayerViewContract {
     @IBAction func tapAction(_ sender: Any) {
         presenter.tappedForPhoto()
     }
+    
+    func createPicker() -> PHPickerViewController {
+        var pickerConfiguration = PHPickerConfiguration()
+        pickerConfiguration.filter = .images
+        let pickerVC = PHPickerViewController(configuration: pickerConfiguration)
+        
+        pickerVC.delegate = self
+        return pickerVC
+    }
+}
 
+extension PhotoPlayerView: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        
+        presenter.hidePicker()
+        
+        if let itemProvider = results.first?.itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
+            let previousImage = photoImageView.image
+            itemProvider.loadObject(ofClass: UIImage.self) { [weak self] image, error in
+                
+                DispatchQueue.main.async {
+                    if error != nil, let self = self {
+                        self.presenter.showPhotoError()
+                        return
+                    }
+                    guard let self = self, let image = image as? UIImage, self.photoImageView.image == previousImage else {
+                        return
+                    }
+                    self.photoImageView.image = image
+                }
+                
+            }
+        }
+    }
 }

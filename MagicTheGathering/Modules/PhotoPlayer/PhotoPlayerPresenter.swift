@@ -32,13 +32,32 @@ class PhotoPlayerPresenter: BasePresenter, PhotoPlayerPresenterContract {
             interactor.accessPhotoLibrary()
         }.done { result in
             if result {
-                print("Tengo autorizacion")
+                // Tengo autorizacion
+                let pickerVC = self.view.createPicker()
+                self.wireframe.showPicker(picker: pickerVC)
             } else {
-                print("NO AUTORIZADO")
+                // No tengo autorizacion
+                self.showPickerNotAuthorized()
             }
         }.catch { error in
-            print("Algo ha ido mal: \(error).")
+            debugPrint("Algo ha ido mal: \(error).")
         }
+        
+    }
+    
+    func hidePicker() {
+        wireframe.hidePicker()
+    }
+    
+    func showPhotoError() {
+        wireframe.showCustomModalAlert(view, title: "Error loading photo",
+                                       content: "Selected photo could not be loaded",
+                                       completion: nil)
+    }
+    func showPickerNotAuthorized() {
+        wireframe.showCustomModalAlert(view, title: "Error",
+                                       content: "Not authorized to access photo library",
+                                       completion: nil)
     }
 }
 
