@@ -41,7 +41,7 @@ class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
         case 2:
             return checkTextFieldNumWords(textField, minWords: 1)
         case 4:
-            return checkSameTextInput(textField, vs: .repeatEmail)
+            return checkEmail(textField) && checkSameTextInput(textField, vs: .repeatEmail)
         case 5:
             return checkSameTextInput(textField, vs: .email)
         case 6:
@@ -62,6 +62,14 @@ class NewPlayerFormViewDelegate: NSObject, UITextFieldDelegate {
         
         case 3:
             return checkPhoneNumber(textField, shouldChangeCharactersIn: range, replacementString: string)
+        case 4:
+            return checkforWhiteSpaces(textField, shouldChangeCharactersIn: range, replacementString: string)
+        case 5:
+            return checkforWhiteSpaces(textField, shouldChangeCharactersIn: range, replacementString: string)
+        case 6:
+            return checkforWhiteSpaces(textField, shouldChangeCharactersIn: range, replacementString: string)
+        case 7:
+            return checkforWhiteSpaces(textField, shouldChangeCharactersIn: range, replacementString: string)
         default:
             return true
         }
@@ -163,6 +171,37 @@ extension NewPlayerFormViewDelegate {
         }
     }
     
+    private func checkforWhiteSpaces(_ textField: UITextField,
+                                     shouldChangeCharactersIn range: NSRange,
+                                     replacementString string: String) -> Bool {
+        // Compruebo que no se escriban caracteres de espacios en blanco ni saltos de linea
+        return string.rangeOfCharacter(from: CharacterSet.whitespacesAndNewlines) == nil
+    }
+    
+    private func checkEmail(_ textField: UITextField) -> Bool {
+        guard let textToCheck = textField.text else {
+            return true
+        }
+        
+        let range = NSRange(location: 0, length: textToCheck.utf16.count)
+        
+        do {
+            let emailRegEx = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
+
+            let result = emailRegEx.matches(in: textToCheck, range: range)
+            
+            if result.isEmpty {
+                setTextFieldError(textField)
+                return false
+            } else {
+                clearTextFieldError(textField)
+                return true
+            }
+        } catch {
+            fatalError("Invalid regular expresion to check email")
+        }
+    }
+    
     // Aqui solo voy a controlar que tenga un minimo de 8 caracteres, con una mayuscula y un numero
     // Obviamente habria que controlar tambien que no haya caracteres extraños, tipo espaios en blanco
     // o caracteres no representables
@@ -178,6 +217,7 @@ extension NewPlayerFormViewDelegate {
         // la expresion regular que he puesto, funciona correctamente y ademas si por algun motivo
         // un error al escribir codigo hace que se cambie la expresion,
         // nos serviria para darnos cuenta del error porque "petaria" la simulacion
+        // La funcion anterior si que la he hecho con do-try-catch, jeje
         
         // swiftlint:disable:next force_try
         let regexUpper = try! NSRegularExpression(pattern: "[A-Z]")
