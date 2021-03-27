@@ -30,7 +30,7 @@ class PhotoPlayerView: BaseViewController, PhotoPlayerViewContract {
 
     func setUpNavigationTitle(title: String) {
         self.navigationItem.title = title
-        setUpNavigationTitleFont(fontSize: 24, color: .label)
+        setUpNavigationTitleFont(fontSize: 24, color: .systemGreen)
     }
     
     func setUpTabBar(title: String) {
