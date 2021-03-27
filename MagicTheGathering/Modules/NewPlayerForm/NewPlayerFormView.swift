@@ -61,40 +61,10 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
     }
     
     private func setupView() {
-        nameTextField.tag = 0
-        nameTextField.clearButtonMode = .always
-        nameTextField.delegate = textFieldsDelegate
-        aliasTextField.tag = 1
-        aliasTextField.clearButtonMode = .always
-        aliasTextField.delegate = textFieldsDelegate
-        planeskalkerTextField.tag = 2
-        planeskalkerTextField.clearButtonMode = .always
-        planeskalkerTextField.delegate = textFieldsDelegate
-        phoneTextField.tag = 3
-        phoneTextField.clearButtonMode = .always
-        phoneTextField.delegate = textFieldsDelegate
-        emailTextField.tag = 4
-        emailTextField.clearButtonMode = .always
-        emailTextField.delegate = textFieldsDelegate
-        repeatEmailTextField.tag = 5
-        repeatEmailTextField.clearButtonMode = .always
-        repeatEmailTextField.delegate = textFieldsDelegate
-        passwordTxtField.tag = 6
-        passwordTxtField.clearButtonMode = .always
-        passwordTxtField.clearsOnBeginEditing = true
-        passwordTxtField.clearsOnInsertion = true
-        passwordTxtField.passwordRules =
-            UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
-        passwordTxtField.delegate = textFieldsDelegate
-        repeatPasswordTextField.tag = 7
-        repeatPasswordTextField.clearButtonMode = .always
-        repeatPasswordTextField.clearsOnBeginEditing = true
-        repeatPasswordTextField.clearsOnInsertion = true
-        repeatPasswordTextField.passwordRules =
-            UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
-        repeatPasswordTextField.delegate = textFieldsDelegate
-        
+        setupTextFields()
         setupTextFieldsFont()
+        setupButtonFontAndColors()
+        
         scrollView.keyboardDismissMode = .onDrag
     }
     
@@ -134,15 +104,76 @@ extension NewPlayerFormView {
         scrollView.contentInset = UIEdgeInsets.zero
      }
     
+    private func setupTextFields() {
+        nameTextField.tag = 0
+        nameTextField.clearButtonMode = .always
+        nameTextField.delegate = textFieldsDelegate
+        aliasTextField.tag = 1
+        aliasTextField.clearButtonMode = .always
+        aliasTextField.delegate = textFieldsDelegate
+        planeskalkerTextField.tag = 2
+        planeskalkerTextField.clearButtonMode = .always
+        planeskalkerTextField.delegate = textFieldsDelegate
+        phoneTextField.tag = 3
+        phoneTextField.clearButtonMode = .always
+        phoneTextField.delegate = textFieldsDelegate
+        emailTextField.tag = 4
+        emailTextField.clearButtonMode = .always
+        emailTextField.delegate = textFieldsDelegate
+        repeatEmailTextField.tag = 5
+        repeatEmailTextField.clearButtonMode = .always
+        repeatEmailTextField.delegate = textFieldsDelegate
+        passwordTxtField.tag = 6
+        passwordTxtField.clearButtonMode = .always
+        passwordTxtField.clearsOnBeginEditing = true
+        passwordTxtField.clearsOnInsertion = true
+        passwordTxtField.passwordRules =
+            UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
+        passwordTxtField.delegate = textFieldsDelegate
+        repeatPasswordTextField.tag = 7
+        repeatPasswordTextField.clearButtonMode = .always
+        repeatPasswordTextField.clearsOnBeginEditing = true
+        repeatPasswordTextField.clearsOnInsertion = true
+        repeatPasswordTextField.passwordRules =
+            UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
+        repeatPasswordTextField.delegate = textFieldsDelegate
+    }
+    
     private func setupTextFieldsFont() {
-        if let magicFont = UIFont(name: Constants.magicFont, size: 14) {
-            nameTextField.font = magicFont
-            aliasTextField.font = magicFont
-            planeskalkerTextField.font = magicFont
-            emailTextField.font = magicFont
-            repeatEmailTextField.font = magicFont
-            passwordTxtField.font = magicFont
-            repeatPasswordTextField.font = magicFont
+        for textField in [nameTextField, aliasTextField, planeskalkerTextField, emailTextField,
+                          repeatEmailTextField, passwordTxtField, repeatPasswordTextField] {
+            if let magicFont = UIFont(name: Constants.magicFont, size: 14), let textField = textField {
+                textField.font = magicFont
+            }
+            
+            for textField in [nameTextField, aliasTextField, planeskalkerTextField, phoneTextField,
+                              emailTextField, repeatEmailTextField, passwordTxtField, repeatPasswordTextField] {
+                if let textField = textField {
+                    textField.layer.cornerRadius = 5
+                    textField.layer.borderWidth = 1
+                    textField.layer.borderColor = UIColor.systemGray2.cgColor
+                    
+                    // Esto oculta en el ipad la barra de botones de deshacer y rehacer que aparece encima del teclado
+                    // por lo visto hay un bug en iOS 14 que hace que salgan por consola muchos warnings de constrints
+                    // al aparecer el teclado y aunque parece que esta todo bien, los errores salen.
+                    let item = textField.inputAssistantItem
+                    item.leadingBarButtonGroups = []
+                    item.trailingBarButtonGroups = []
+
+                }
+            }
         }
+    }
+    
+    private func setupButtonFontAndColors() {
+        if let magicFont = UIFont(name: Constants.magicFont, size: 17) {
+            registerButton.titleLabel?.font = magicFont
+        }
+        registerButton.backgroundColor = .systemBackground
+        registerButton.tintColor = .label
+        registerButton.layer.cornerRadius = 5
+        registerButton.layer.shadowColor = UIColor.label.cgColor
+        registerButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        registerButton.layer.shadowOpacity = 1
     }
 }
