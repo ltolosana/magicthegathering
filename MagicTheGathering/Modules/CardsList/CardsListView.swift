@@ -37,7 +37,7 @@ class CardsListView: BaseViewController, CardsListViewContract {
     
     func setUpNavigationTitle(title: String) {
         self.navigationItem.title = title
-        setUpNavigationTitleFont(fontSize: 24, color: .label)
+        setUpNavigationTitleFont(fontSize: 24, color: .systemRed)
     }
     
     func setUpTabBar(title: String) {
