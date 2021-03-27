@@ -34,6 +34,15 @@
 		6020683226090008001B0E02 /* CardDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020682A26090008001B0E02 /* CardDetailWireframe.swift */; };
 		60238D6D2602B65000877DD2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60238D6C2602B65000877DD2 /* Card.swift */; };
 		6032F8DB260DE1C300605063 /* NewPlayerFormViewDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032F8DA260DE1C300605063 /* NewPlayerFormViewDelegateTests.swift */; };
+		6032F91C260E012900605063 /* PhotoPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032F914260E012900605063 /* PhotoPlayerContract.swift */; };
+		6032F91D260E012900605063 /* PhotoPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032F915260E012900605063 /* PhotoPlayerPresenter.swift */; };
+		6032F91E260E012900605063 /* PhotoPlayerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032F916260E012900605063 /* PhotoPlayerBuilder.swift */; };
+		6032F91F260E012900605063 /* PhotoPlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032F917260E012900605063 /* PhotoPlayerInteractor.swift */; };
+		6032F920260E012900605063 /* PhotoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032F918260E012900605063 /* PhotoPlayerView.swift */; };
+		6032F921260E012900605063 /* PhotoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6032F919260E012900605063 /* PhotoPlayerView.xib */; };
+		6032F922260E012900605063 /* PhotoPlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032F91A260E012900605063 /* PhotoPlayerEntity.swift */; };
+		6032F923260E012900605063 /* PhotoPlayerWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032F91B260E012900605063 /* PhotoPlayerWireframe.swift */; };
+		6032F92D260E316C00605063 /* PhotoPlayerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032F92C260E316C00605063 /* PhotoPlayerProvider.swift */; };
 		605D83AC2603C71C007CC436 /* MagicNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83AB2603C71C007CC436 /* MagicNetworkProvider.swift */; };
 		605D83B22603CA10007CC436 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83B12603CA10007CC436 /* NetworkConstants.swift */; };
 		605D83B62603CA84007CC436 /* BaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605D83B52603CA84007CC436 /* BaseNetworkProvider.swift */; };
@@ -111,6 +120,15 @@
 		6020682A26090008001B0E02 /* CardDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailWireframe.swift; sourceTree = "<group>"; };
 		60238D6C2602B65000877DD2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		6032F8DA260DE1C300605063 /* NewPlayerFormViewDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerFormViewDelegateTests.swift; sourceTree = "<group>"; };
+		6032F914260E012900605063 /* PhotoPlayerContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPlayerContract.swift; sourceTree = "<group>"; };
+		6032F915260E012900605063 /* PhotoPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPlayerPresenter.swift; sourceTree = "<group>"; };
+		6032F916260E012900605063 /* PhotoPlayerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPlayerBuilder.swift; sourceTree = "<group>"; };
+		6032F917260E012900605063 /* PhotoPlayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPlayerInteractor.swift; sourceTree = "<group>"; };
+		6032F918260E012900605063 /* PhotoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPlayerView.swift; sourceTree = "<group>"; };
+		6032F919260E012900605063 /* PhotoPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPlayerView.xib; sourceTree = "<group>"; };
+		6032F91A260E012900605063 /* PhotoPlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPlayerEntity.swift; sourceTree = "<group>"; };
+		6032F91B260E012900605063 /* PhotoPlayerWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPlayerWireframe.swift; sourceTree = "<group>"; };
+		6032F92C260E316C00605063 /* PhotoPlayerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPlayerProvider.swift; sourceTree = "<group>"; };
 		605D83AB2603C71C007CC436 /* MagicNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicNetworkProvider.swift; sourceTree = "<group>"; };
 		605D83B12603CA10007CC436 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		605D83B52603CA84007CC436 /* BaseNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkProvider.swift; sourceTree = "<group>"; };
@@ -250,10 +268,42 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6032F8FA260DFFF500605063 /* PhotoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				6032F916260E012900605063 /* PhotoPlayerBuilder.swift */,
+				6032F914260E012900605063 /* PhotoPlayerContract.swift */,
+				6032F91A260E012900605063 /* PhotoPlayerEntity.swift */,
+				6032F917260E012900605063 /* PhotoPlayerInteractor.swift */,
+				6032F915260E012900605063 /* PhotoPlayerPresenter.swift */,
+				6032F918260E012900605063 /* PhotoPlayerView.swift */,
+				6032F91B260E012900605063 /* PhotoPlayerWireframe.swift */,
+				6032F928260E012F00605063 /* UI */,
+			);
+			path = PhotoPlayer;
+			sourceTree = "<group>";
+		};
+		6032F928260E012F00605063 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6032F919260E012900605063 /* PhotoPlayerView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6032F92B260E313300605063 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				6032F92C260E316C00605063 /* PhotoPlayerProvider.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		605D83A72603C674007CC436 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
 				605D83A92603C6DD007CC436 /* Network */,
+				6032F92B260E313300605063 /* System */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -326,6 +376,7 @@
 		60DC59292607CE6200CBA12A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6032F8FA260DFFF500605063 /* PhotoPlayer */,
 				6007C81B260A99D900195155 /* NewPlayerForm */,
 				60DC59402607CFCD00CBA12A /* BASE */,
 				602068222608FFEA001B0E02 /* CardDetail */,
@@ -526,6 +577,7 @@
 				6007C7F9260A51D800195155 /* MainTabBarView.xib in Resources */,
 				6007C829260A99F200195155 /* NewPlayerFormView.xib in Resources */,
 				6020683026090008001B0E02 /* CardDetailView.xib in Resources */,
+				6032F921260E012900605063 /* PhotoPlayerView.xib in Resources */,
 				60A008F825FD5EAF00A2941E /* Assets.xcassets in Resources */,
 				60DC59382607CF2600CBA12A /* CardsListView.xib in Resources */,
 			);
@@ -628,6 +680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DC59342607CF2600CBA12A /* CardsListPresenter.swift in Sources */,
+				6032F923260E012900605063 /* PhotoPlayerWireframe.swift in Sources */,
 				6007C7F8260A51D800195155 /* MainTabBarView.swift in Sources */,
 				6007C824260A99F200195155 /* NewPlayerFormContract.swift in Sources */,
 				60DC59602607D06000CBA12A /* BaseEntity.swift in Sources */,
@@ -635,11 +688,13 @@
 				6020682F26090008001B0E02 /* CardDetailView.swift in Sources */,
 				6007C7F4260A51D800195155 /* MainTabBarContract.swift in Sources */,
 				6086E241260BD00B00B20300 /* NewPlayerFormViewDelegate.swift in Sources */,
+				6032F91F260E012900605063 /* PhotoPlayerInteractor.swift in Sources */,
 				605D83B22603CA10007CC436 /* NetworkConstants.swift in Sources */,
 				6007C7FB260A51D800195155 /* MainTabBarWireframe.swift in Sources */,
 				6007C7BC260A1F1B00195155 /* Constants.swift in Sources */,
 				6020682E26090008001B0E02 /* CardDetailInteractor.swift in Sources */,
 				60DC59352607CF2600CBA12A /* CardsListBuilder.swift in Sources */,
+				6032F922260E012900605063 /* PhotoPlayerEntity.swift in Sources */,
 				60DC59692607D44D00CBA12A /* UIViewControllerExtension.swift in Sources */,
 				6007C7F6260A51D800195155 /* MainTabBarBuilder.swift in Sources */,
 				6007C82A260A99F200195155 /* NewPlayerFormEntity.swift in Sources */,
@@ -648,7 +703,9 @@
 				60DC597A2607EF4100CBA12A /* CardsListCollectionViewCell.swift in Sources */,
 				60DC59622607D06000CBA12A /* BaseViewController.swift in Sources */,
 				6020683226090008001B0E02 /* CardDetailWireframe.swift in Sources */,
+				6032F920260E012900605063 /* PhotoPlayerView.swift in Sources */,
 				60DC59362607CF2600CBA12A /* CardsListInteractor.swift in Sources */,
+				6032F92D260E316C00605063 /* PhotoPlayerProvider.swift in Sources */,
 				6007C82B260A99F200195155 /* NewPlayerFormWireframe.swift in Sources */,
 				60E6EFDC260003C900C884A8 /* Environment.swift in Sources */,
 				6020682C26090008001B0E02 /* CardDetailPresenter.swift in Sources */,
@@ -661,15 +718,18 @@
 				605D83AC2603C71C007CC436 /* MagicNetworkProvider.swift in Sources */,
 				6020683126090008001B0E02 /* CardDetailEntity.swift in Sources */,
 				60A008EF25FD5EAE00A2941E /* AppDelegate.swift in Sources */,
+				6032F91D260E012900605063 /* PhotoPlayerPresenter.swift in Sources */,
 				60DC59372607CF2600CBA12A /* CardsListView.swift in Sources */,
 				6007C7F5260A51D800195155 /* MainTabBarPresenter.swift in Sources */,
 				6007C828260A99F200195155 /* NewPlayerFormView.swift in Sources */,
 				60A008F125FD5EAE00A2941E /* SceneDelegate.swift in Sources */,
 				60DC59612607D06000CBA12A /* BaseWireframe.swift in Sources */,
+				6032F91E260E012900605063 /* PhotoPlayerBuilder.swift in Sources */,
 				6007C7F7260A51D800195155 /* MainTabBarInteractor.swift in Sources */,
 				60DC59392607CF2600CBA12A /* CardsListEntity.swift in Sources */,
 				60DC595F2607D06000CBA12A /* BaseInteractor.swift in Sources */,
 				6007C827260A99F200195155 /* NewPlayerFormInteractor.swift in Sources */,
+				6032F91C260E012900605063 /* PhotoPlayerContract.swift in Sources */,
 				60DC59332607CF2600CBA12A /* CardsListContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

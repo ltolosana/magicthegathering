@@ -31,7 +31,10 @@ class MainTabBarPresenter: BasePresenter, MainTabBarPresenterContract {
         let newPlayerVC = NewPlayerFormBuilder.build()
         let newPlayerNavigationVC = wireframe.embedInNavigation(newPlayerVC)
 
-        return [cardsNavigationVC, newPlayerNavigationVC]
+        let photoPlayerVC = PhotoPlayerBuilder.build()
+        let photoPlayerNavigationVC = wireframe.embedInNavigation(photoPlayerVC)
+        
+        return [cardsNavigationVC, newPlayerNavigationVC, photoPlayerNavigationVC]
     }
 }
 
