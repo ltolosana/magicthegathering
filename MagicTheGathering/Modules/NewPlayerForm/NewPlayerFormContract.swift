@@ -34,10 +34,26 @@ protocol NewPlayerFormPresenterContract: BasePresenter {
     func viewDidLoad()
     func viewWillAppear()
     func viewWillDisappear()
+    
+    func onCheckTextFieldNumWords(_ text: String, minWords: Int) -> Bool
+    func onCheckPhoneDigits(_ text: String) -> Bool
+    func onCheckEmail(_ text: String) -> Bool
+    func onCheckSameTextInput(_ text: String, vs otherText: String) -> Bool
+    func onCheckPasswordConstraints(_ text: String, minCharacters: Int) -> Bool
+    func onCheckPhoneNumber(range: NSRange, string: String) -> Bool
+    func onCheckForWhiteSpaces(string: String) -> Bool
 }
 
 protocol NewPlayerFormInteractorContract: BaseInteractor {
     var output: NewPlayerFormInteractorOutputContract! {get set}
+    
+    func checkTextFieldNumWords(_ text: String, minWords: Int) -> Bool
+    func checkPhoneDigits(_ text: String) -> Bool
+    func checkEmail(_ text: String) -> Bool
+    func checkSameTextInput(_ text: String, vs otherText: String) -> Bool
+    func checkPasswordConstraints(_ text: String, minCharacters: Int) -> Bool
+    func checkPhoneNumber(range: NSRange, string: String) -> Bool
+    func checkForWhiteSpaces(string: String) -> Bool
 }
 
 protocol NewPlayerFormInteractorOutputContract: class {

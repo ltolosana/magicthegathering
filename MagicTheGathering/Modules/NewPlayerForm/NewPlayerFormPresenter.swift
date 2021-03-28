@@ -28,6 +28,35 @@ class NewPlayerFormPresenter: BasePresenter, NewPlayerFormPresenterContract {
     func viewWillDisappear() {
         view.removeObservers()
     }
+    
+    func onCheckTextFieldNumWords(_ text: String, minWords: Int) -> Bool {
+        interactor.checkTextFieldNumWords(text, minWords: minWords)
+    }
+    
+    func onCheckPhoneDigits(_ text: String) -> Bool {
+        interactor.checkPhoneDigits(text)
+    }
+    
+    func onCheckEmail(_ text: String) -> Bool {
+        interactor.checkEmail(text)
+    }
+    
+    func onCheckSameTextInput(_ text: String, vs otherText: String) -> Bool {
+        interactor.checkSameTextInput(text, vs: otherText)
+    }
+
+    func onCheckPasswordConstraints(_ text: String, minCharacters: Int) -> Bool {
+        interactor.checkPasswordConstraints(text, minCharacters: minCharacters)
+    }
+    
+    func onCheckPhoneNumber(range: NSRange, string: String) -> Bool {
+        interactor.checkPhoneNumber(range: range, string: string)
+    }
+    
+    func onCheckForWhiteSpaces(string: String) -> Bool {
+        interactor.checkForWhiteSpaces(string: string)
+    }
+
 }
 
 // MARK: - NewPlayerFormInteractorOutputContract

@@ -25,10 +25,7 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
     @IBOutlet weak var registerButton: UIButton!
     
     var presenter: NewPlayerFormPresenterContract!
-    
-    // swiftlint:disable:next weak_delegate
-    private var textFieldsDelegate: UITextFieldDelegate = NewPlayerFormViewDelegate()
-
+       
 	// MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,36 +104,36 @@ extension NewPlayerFormView {
     private func setupTextFields() {
         nameTextField.tag = 0
         nameTextField.clearButtonMode = .always
-        nameTextField.delegate = textFieldsDelegate
+        nameTextField.delegate = self
         aliasTextField.tag = 1
         aliasTextField.clearButtonMode = .always
-        aliasTextField.delegate = textFieldsDelegate
+        aliasTextField.delegate = self
         planeskalkerTextField.tag = 2
         planeskalkerTextField.clearButtonMode = .always
-        planeskalkerTextField.delegate = textFieldsDelegate
+        planeskalkerTextField.delegate = self
         phoneTextField.tag = 3
         phoneTextField.clearButtonMode = .always
-        phoneTextField.delegate = textFieldsDelegate
+        phoneTextField.delegate = self
         emailTextField.tag = 4
         emailTextField.clearButtonMode = .always
-        emailTextField.delegate = textFieldsDelegate
+        emailTextField.delegate = self
         repeatEmailTextField.tag = 5
         repeatEmailTextField.clearButtonMode = .always
-        repeatEmailTextField.delegate = textFieldsDelegate
+        repeatEmailTextField.delegate = self
         passwordTxtField.tag = 6
         passwordTxtField.clearButtonMode = .always
         passwordTxtField.clearsOnBeginEditing = true
         passwordTxtField.clearsOnInsertion = true
         passwordTxtField.passwordRules =
             UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
-        passwordTxtField.delegate = textFieldsDelegate
+        passwordTxtField.delegate = self
         repeatPasswordTextField.tag = 7
         repeatPasswordTextField.clearButtonMode = .always
         repeatPasswordTextField.clearsOnBeginEditing = true
         repeatPasswordTextField.clearsOnInsertion = true
         repeatPasswordTextField.passwordRules =
             UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
-        repeatPasswordTextField.delegate = textFieldsDelegate
+        repeatPasswordTextField.delegate = self
     }
     
     private func setupTextFieldsFont() {
