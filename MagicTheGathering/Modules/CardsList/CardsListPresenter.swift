@@ -30,6 +30,7 @@ class CardsListPresenter: BasePresenter, CardsListPresenterContract {
             self?.view.updateCardsData(cards: cardsListData)
             self?.view.stopAnimating()
         }.catch { error in
+            self.view.stopAnimating()
             self.wireframe.feedbackError(error: error)
         }
     }
