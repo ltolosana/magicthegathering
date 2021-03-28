@@ -84,11 +84,6 @@ extension NewPlayerFormView {
                                                object: nil, queue: nil) { notification in
                 self.keyboardWillHide(notification: notification)
             }
-        
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardDidChangeFrameNotification,
-                                               object: nil, queue: nil) { notification in
-                self.keyboardWillHide(notification: notification)
-            }
     }
 
     func removeObservers() {
