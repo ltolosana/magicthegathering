@@ -25,6 +25,8 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
     @IBOutlet weak var registerButton: UIButton!
     
     var presenter: NewPlayerFormPresenterContract!
+    
+    var activeField: UITextField?
        
 	// MARK: - LifeCycle
     override func viewDidLoad() {
@@ -73,12 +75,17 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
 extension NewPlayerFormView {
 
     func addObservers() {
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification,
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardDidShowNotification,
                                                object: nil, queue: nil) { notification in
                 self.keyboardWillShow(notification: notification)
             }
 
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification,
+                                               object: nil, queue: nil) { notification in
+                self.keyboardWillHide(notification: notification)
+            }
+        
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardDidChangeFrameNotification,
                                                object: nil, queue: nil) { notification in
                 self.keyboardWillHide(notification: notification)
             }
@@ -95,10 +102,12 @@ extension NewPlayerFormView {
             }
             let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: 0)
             scrollView.contentInset = contentInset
+        scrollView.scrollIndicatorInsets = contentInset
     }
 
     private func keyboardWillHide(notification: Notification) {
         scrollView.contentInset = UIEdgeInsets.zero
+        scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
      }
     
     private func setupTextFields() {
