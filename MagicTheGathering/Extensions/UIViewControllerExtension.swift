@@ -24,26 +24,29 @@ extension UIViewController {
     }
     
     func setUpNavigationTitleFont(fontSize: CGFloat, color: UIColor) {
-        if let magicFont = UIFont(name: Constants.magicFont, size: 24) {
-            let attributes = [NSAttributedString.Key.font: magicFont, NSAttributedString.Key.foregroundColor: color]
-            self.navigationController?.navigationBar.titleTextAttributes = attributes
-  
-        // El siguiente codigo es para cambiar, ademas del title, el boton de atras
-        // de una forma que se usa a partir de iOS 13
-        // El problema es que en la fuente que he escogido no aparee el simbolo "<"
-        // por lo que saca un monton de mensajes en la consola, asi que,
-        // aunque quede un poco mas feo, voy a dejar el tipo de letra por defecto
-        // para el boton de back del navigation
-/*
+        /*
+         if let magicFont = UIFont(name: Constants.magicFont, size: 24) {
+         let attributes = [NSAttributedString.Key.font: magicFont, NSAttributedString.Key.foregroundColor: color]
+         self.navigationController?.navigationBar.titleTextAttributes = attributes
+         */
+        
+        // En vez de usar el codigo de arriba que solo cambia la fuente del Title del navigation,
+        // he usado lo de abajo, que cambia los atributos de la navigation bar, aunque aparece
+        // un problema que explico un poco mas abajo
+        
         let navBarAppearance = UINavigationBarAppearance()
         if let magicFont = UIFont(name: Constants.magicFont, size: 24) {
-            let attributes = [NSAttributedString.Key.font: magicFont]
+            let attributes = [NSAttributedString.Key.font: magicFont, NSAttributedString.Key.foregroundColor: color]
             navBarAppearance.titleTextAttributes = attributes
+            // Al poner esta propiedad de aqui abajo, para cambiar la fuente del texto del boton de "Atras"
+            // aparecen mensajes en consola que creo que son de CoreUI Catalog
+            // No he sabido averiguar por que aparecen ni como quitarlos
+            // Bueno, como quitarlos, si, no aplicando la fuente
             navBarAppearance.backButtonAppearance.normal.titleTextAttributes = attributes
             
             self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
             self.navigationController?.navigationBar.standardAppearance = navBarAppearance
- */
+            self.navigationController?.navigationBar.tintColor = color
         }
     }
     
