@@ -26,9 +26,8 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
     
     var presenter: NewPlayerFormPresenterContract!
     
-    // swiftlint:disable:next weak_delegate
-    private var textFieldsDelegate: UITextFieldDelegate = NewPlayerFormViewDelegate()
-
+    var activeField: UITextField?
+       
 	// MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +75,7 @@ class NewPlayerFormView: BaseViewController, NewPlayerFormViewContract {
 extension NewPlayerFormView {
 
     func addObservers() {
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification,
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardDidShowNotification,
                                                object: nil, queue: nil) { notification in
                 self.keyboardWillShow(notification: notification)
             }
@@ -98,45 +97,47 @@ extension NewPlayerFormView {
             }
             let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: 0)
             scrollView.contentInset = contentInset
+        scrollView.scrollIndicatorInsets = contentInset
     }
 
     private func keyboardWillHide(notification: Notification) {
         scrollView.contentInset = UIEdgeInsets.zero
+        scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
      }
     
     private func setupTextFields() {
         nameTextField.tag = 0
         nameTextField.clearButtonMode = .always
-        nameTextField.delegate = textFieldsDelegate
+        nameTextField.delegate = self
         aliasTextField.tag = 1
         aliasTextField.clearButtonMode = .always
-        aliasTextField.delegate = textFieldsDelegate
+        aliasTextField.delegate = self
         planeskalkerTextField.tag = 2
         planeskalkerTextField.clearButtonMode = .always
-        planeskalkerTextField.delegate = textFieldsDelegate
+        planeskalkerTextField.delegate = self
         phoneTextField.tag = 3
         phoneTextField.clearButtonMode = .always
-        phoneTextField.delegate = textFieldsDelegate
+        phoneTextField.delegate = self
         emailTextField.tag = 4
         emailTextField.clearButtonMode = .always
-        emailTextField.delegate = textFieldsDelegate
+        emailTextField.delegate = self
         repeatEmailTextField.tag = 5
         repeatEmailTextField.clearButtonMode = .always
-        repeatEmailTextField.delegate = textFieldsDelegate
+        repeatEmailTextField.delegate = self
         passwordTxtField.tag = 6
         passwordTxtField.clearButtonMode = .always
         passwordTxtField.clearsOnBeginEditing = true
         passwordTxtField.clearsOnInsertion = true
         passwordTxtField.passwordRules =
             UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
-        passwordTxtField.delegate = textFieldsDelegate
+        passwordTxtField.delegate = self
         repeatPasswordTextField.tag = 7
         repeatPasswordTextField.clearButtonMode = .always
         repeatPasswordTextField.clearsOnBeginEditing = true
         repeatPasswordTextField.clearsOnInsertion = true
         repeatPasswordTextField.passwordRules =
             UITextInputPasswordRules(descriptor: "required: upper; required: digit; allowed: upper; minlength: 8;")
-        repeatPasswordTextField.delegate = textFieldsDelegate
+        repeatPasswordTextField.delegate = self
     }
     
     private func setupTextFieldsFont() {
@@ -172,6 +173,8 @@ extension NewPlayerFormView {
         registerButton.backgroundColor = .systemBackground
         registerButton.tintColor = .label
         registerButton.layer.cornerRadius = 5
+        registerButton.layer.borderWidth = 1
+        registerButton.layer.borderColor = UIColor.systemGray2.cgColor
         registerButton.layer.shadowColor = UIColor.label.cgColor
         registerButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         registerButton.layer.shadowOpacity = 1
