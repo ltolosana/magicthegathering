@@ -178,6 +178,8 @@ extension NewPlayerFormView {
         registerButton.backgroundColor = .systemBackground
         registerButton.tintColor = .label
         registerButton.layer.cornerRadius = 5
+        registerButton.layer.borderWidth = 1
+        registerButton.layer.borderColor = UIColor.systemGray2.cgColor
         registerButton.layer.shadowColor = UIColor.label.cgColor
         registerButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         registerButton.layer.shadowOpacity = 1
