@@ -12,6 +12,7 @@ import UIKit
 class CardsListView: BaseViewController, CardsListViewContract {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var presenter: CardsListPresenterContract!
     
@@ -47,9 +48,18 @@ class CardsListView: BaseViewController, CardsListViewContract {
         tabBarItem.selectedImage = icon?.withTintColor(.systemRed, renderingMode: .alwaysOriginal)
         setUpTabBarItemFont(fontSize: 16, color: .systemRed)
     }
+    
+    func stopAnimating() {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+    }
        
     // MARK: - Private methods
     private func setupView() {
+        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
         collectionView.register(UINib(nibName: CardsListCollectionViewCell.cellId, bundle: nil),
                                 forCellWithReuseIdentifier: CardsListCollectionViewCell.cellId)
         

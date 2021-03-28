@@ -21,6 +21,8 @@ protocol CardsListViewContract: BaseViewController {
     func updateCardsData(cards: [Card])
     func setUpNavigationTitle(title: String)
     func setUpTabBar(title: String)
+    
+    func stopAnimating()
 }
 
 protocol CardsListPresenterContract: BasePresenter {
