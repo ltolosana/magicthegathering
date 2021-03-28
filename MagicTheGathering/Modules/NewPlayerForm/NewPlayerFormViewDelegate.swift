@@ -46,7 +46,7 @@ extension NewPlayerFormView: UITextFieldDelegate {
         case 4:
             return checkEmail(textField) && checkSameTextInput(textField, vs: .repeatEmail)
         case 5:
-            return checkSameTextInput(textField, vs: .email)
+            return checkEmail(textField) && checkSameTextInput(textField, vs: .email)
         case 6:
             // Aqui hago una doble comprobacion, la de los requerimientos de la contraseña (cantidad de caracteres,
             // mayuscula y numero) y la de que coincida la contraseña con la del campo de repetirla
@@ -209,7 +209,7 @@ extension NewPlayerFormView: UITextFieldDelegate {
     }
     
     private func clearTextFieldError(_ textField: UITextField) {
-        let originalBackgroundColor = UIColor.white
+        let originalBackgroundColor = UIColor.systemBackground
         
         textField.leftViewMode = .never
         textField.backgroundColor = originalBackgroundColor
